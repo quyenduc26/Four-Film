@@ -35,6 +35,9 @@ body{
 .footer{
     background-color: var(--nav-color);
 }
+strong{
+    font-size: 16px;
+}
 .info_footer{
     color: var(--nav-text-color);
 }
