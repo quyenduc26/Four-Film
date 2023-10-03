@@ -1,0 +1,70 @@
+:root{
+    --danger-text:rgba(230, 16, 16, 1);
+    --button: rgba(232, 38, 26, 1);
+    --notice-text: rgba(244, 92, 45, 1);
+    --selecting: rgb(221, 54, 3);
+    --instruction-div: rgba(243, 210, 93, 1);
+    --selection:rgba(48, 210, 45, 1);
+    --normal-text: rgba(255, 255, 255, 1);
+    --sub-heading: rgba(112, 182, 204, 1);
+    --couple-seat: rgba(40, 54, 103, 1);
+    --nav-color:rgba(173, 168, 168, 0.136);
+    --nav-text-color:rgb(75, 77, 78);
+    --instruction-text:rgba(32, 31, 28, 1);
+    --background-color: rgba(16, 16, 16, 1);
+}
+.container-fluid{
+    background-color: var(--background-color);
+}
+.heading_table{
+    background-color:var(--nav-color);
+    color: var(--nav-text-color);
+    font-size: 14px;
+}
+.warning_text{
+    font-size: 14px;
+    background-color: var(--nav-color);
+    color: var(--nav-text-color);
+}
+.info_order{
+    background-color: var(--nav-color);
+    font-size: 12px;
+    color: var(--nav-text-color);
+}
+.pay_button{
+    background-color: var(--couple-seat);
+    color: var(--normal-text);
+}
+.payment_method{
+    background-color: var(--nav-color);
+    
+}
+.pay_app{
+    width: 35px;
+    height: 35px;
+}
+.pay_selection{
+    background-color: var(--nav-color);
+    color: var(--nav-text-color);
+    
+}
+.checkbox_note{
+    font-size: 12px;
+}
+.vanh{
+    background-color: var(--normal-text);
+}
+.date{
+    font-size: 12px;
+}
+.guide{
+    background-color: var(--instruction-div);
+}
+.guide_text{
+    font-size: 12px;
+    color: var(--instruction-text);
+}
+.logo_cinema{
+    width: 65px;
+    height: 40px;
+}
