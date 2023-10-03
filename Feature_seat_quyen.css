@@ -85,3 +85,18 @@ body{
     background-color: var(--nav-color);
     color: var(--nav-text-color);
 }
+.row_seat{
+    /* background-color: var(--nav-color); */
+    display: flex;
+    justify-content: center;
+    /* gap: 3px; */
+}
+.select_seat{
+    display: block;
+    width: 30px !important; 
+    padding: 3px;
+    margin-left: 2px;
+}
+*::-webkit-scrollbar {
+    display: none; 
+}
