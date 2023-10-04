@@ -1,0 +1,108 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.modals {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.modal-contents {
+  background-color: rgba(16, 16, 16, 1);
+  z-index: 999;
+  width: 350px;
+  height: 440px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#form-register {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#registerButton {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: rgba(244, 92, 45, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#registerButton:hover {
+  background-color: rgba(244, 92, 45, 1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#registerButton:active {
+  transform: scale(0.95);
+}
+#displayContent {
+  color: rgba(232, 38, 26, 1);
+  text-align: center;
+  font-weight: bolder;
+}
+#icon {
+  margin-left: 45%;
+}
+.passwordRegister {
+  position: relative;
+}
+.checked-icons {
+  position: absolute;
+  right: 7px;
+  top: 15px;
+}
+#checked-eye {
+  opacity: 0;
+}
+#checked-eye-second {
+  opacity: 0;
+}
+.input-wrapper {
+  position: relative;
+}
+
+.input-error {
+  color: rgba(232, 38, 26, 1);
+  font-size: 12px;
+  position: absolute;
+  bottom: -20px;
+}
+
+.error {
+  color: rgba(232, 38, 26, 1);
+  font-size: 13px;
+  position: absolute;
+}
+.labelRelative {
+  position: relative;
+}
+#errorEmail {
+  top: 48px;
+  display: block;
+}
+#errorFullname {
+  top: 48px;
+  display: block;
+}
+#errorPassword {
+  top: 48px;
+  display: block;
+}
