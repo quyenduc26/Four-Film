@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chose seat</title>
+    <link href="/bootstrap-5.3.1-dist/bootstrap.min.css" rel="stylesheet">
+    <script src="/bootstrap-5.3.1-dist/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Feature_seat_quyen.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row title pt-0 p-2">
+            <div class="col-lg-1 col-1 back text-start mt-2 pt-2">
+                <i class="bi bi-chevron-left" style="color: white;"></i>
+            </div>
+            <div class="col-lg-11 col-11 text-center">
+                <img src="Title.png" alt="title-background">
+            </div>
+        </div>
+        <div class="row nav mt-0  gap-1 pt-2 ">
+            <div class="col-lg-2 col-2 nav-item p-0 text-center">
+                <i class="bi bi-grid "></i>
+                <p class="nav_text">Chọn ghế</p>
+            </div>
+            <div class="col-lg-1 col-1 nav-item p-0 text-center">
+                <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
+            </div>
+            <div class="col-lg-2 col-2 nav-item p-0 text-center">
+                <i class="bi bi-inboxes-fill"></i>
+                <p class="nav_text">Bắp nước</p>
+            </div>
+            <div class="col-lg-1 col-1 nav-item p-0 text-center">
+                <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
+            </div>
+            <div class="col-lg-2 col-2 nav-item p-0 text-center">
+                <i class="bi bi-credit-card-2-front-fill"></i>
+                <p class="nav_text">Thanh toán</p>
+            </div>
+            <div class="col-lg-1 col-1  nav-item p-0 text-center">
+                <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
+            </div>
+            <div class="col-lg-2 col-2 nav-item p-0 text-center">
+                <i class="bi bi-receipt-cutoff"></i>
+                <p class="nav_text">Thông tin về</p>
+            </div> 
+        </div>
+        <div class="right_block mt-3">
+            <div class="row">
+                <div class="col-lg-4 col-12 ">
+                    <div class="row info_order m-3 rounded-2 p-2">
+                        <p class="p-2 pb-0 mb-2">
+                            <span id="film_name">Ten film</span>
+                            <br><strong id="cinema_name">Ten rap phim</strong>
+                            <br><span id="time">19:30</span> - Hom nay <span id="day"></span>
+                            <br>Phong chieu <span id="room">09</span> - Ghe <span id="seat">4F</span>
+                        </p>
+                    </div>
+                    <div class="row info_order m-3 rounded-2 p-2">
+                        <div class="col-lg-6 col-6 border-end text-start mt-1  ">
+                            <p class="mb-0">
+                                <strong style=" font-size: 8px">TONG DON HANG</strong> 
+                                <h6 class="mb-0"><span id="total_seat">100.000</span> đ</h6>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-6 text-end mt-1">
+                            <p class="mb-0">
+                                <strong style=" font-size: 8px">THOI GIAN GIU GHE</strong> 
+                                <h6 class="mb-0" id="time_remaining">12:00</h6>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row rounded-2 m-3 ">
+                        <button class=" rounded-2 border-0 p-1">Thanh toan</button>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12 order-lg-first">
+                    <div class="row m-3 mt-0 mb-2 p-1 rounded-top-3">
+                        <div class="legend">
+                            <div class="seat_type"><span class="seat seat_1"></span> Ghe nam</div>
+                        </div>
+                        <div class="legend">
+                            <div class="seat_type"><span class="seat seat_2"></span> Ghe don</div>
+                            <div class="seat_type"><span class="seat seat_3"></span> Ghe doi</div>
+                            <div class="seat_type"><span class="seat seat_4"></span> Da chon</div>
+                        </div>
+                    </div>
+                    <div class="row m-3 mt-0 mb-0">
+                        <div class="row p-0 mb-4 gap-2 d-flex justify-content-center">
+                            <div class="col-lg-1 col-1 p-0"><span class="space"></span></div>
+                            <div class=" screen col-lg-10 col-10 p-0 m-1 mt-0 mb-0  rounded-1">
+                                <p class=" text-center m-0 "><b> Screen</b></p>
+                            </div>
+                        </div>
+                        <div class="row p-0 mt-2 mb-1 gap-2 justify-content-center ">
+                            <div class="col-lg-1 col-1 p-0 m-0 d-flex justify-content-center align-items-center "><span class="seat_row rounded-1">A</span></div>
+                            <div class=" row_seat col-lg-10 col-10 justify-content-lg-center justify-content-start p-0 m-1 mt-0 mb-0 overflow-scroll">
+                                <input class="select_seat c_1" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_2" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_3" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_4" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_5" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_6" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_7" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_8" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_9" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_10" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_11" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_12" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_13" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_14" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_15" type="checkbox" name="sport" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mt-2 mb-1 gap-2 d-lg-flex justify-content-center">
+                            <div class="col-lg-1 col-1 p-0 m-0 d-flex justify-content-center align-items-center "><span class="seat_row rounded-1">B</span></div>
+                            <div class=" row_seat col-lg-10 col-10 justify-content-lg-center justify-content-start p-0 m-1 mt-0 mb-0 overflow-scroll">
+                                <input class="select_seat c_1" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_2" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_3" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_4" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_5" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_6" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_7" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_8" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_9" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_10" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_11" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_12" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_13" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_14" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_15" type="checkbox" name="sport" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mt-2 mb-1 gap-2 d-flex justify-content-center">
+                            <div class="col-lg-1 col-1 p-0 m-0 d-flex justify-content-center align-items-center "><span class="seat_row rounded-1">C</span></div>
+                            <div class=" row_seat col-lg-10 col-10 justify-content-lg-center justify-content-start p-0 m-1 mt-0 mb-0 overflow-scroll">
+                                <input class="select_seat c_1" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_2" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_3" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_4" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_5" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_6" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_7" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_8" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_9" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_10" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_11" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_12" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_13" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_14" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_15" type="checkbox" name="sport" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mt-2 mb-1 gap-2 d-flex justify-content-center">
+                            <div class="col-lg-1 col-1 p-0 m-0 d-flex justify-content-center align-items-center "><span class="seat_row rounded-1">D</span></div>
+                            <div class=" row_seat col-lg-10 col-10 justify-content-lg-center justify-content-start p-0 m-1 mt-0 mb-0 overflow-scroll">
+                                <input class="select_seat c_1" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_2" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_3" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_4" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_5" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_6" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_7" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_8" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_9" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_10" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_11" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_12" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_13" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_14" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_15" type="checkbox" name="sport" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mt-2 mb-1 gap-2 d-flex justify-content-center">
+                            <div class="col-lg-1 col-1 p-0 m-0 d-flex justify-content-center align-items-center "><span class="seat_row rounded-1">E</span></div>
+                            <div class=" row_seat col-lg-10 col-10 justify-content-lg-center justify-content-start p-0 m-1 mt-0 mb-0 overflow-scroll">
+                                <input class="select_seat c_1" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_2" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_3" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_4" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_5" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_6" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_7" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_8" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_9" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_10" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_11" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_12" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_13" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_14" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_15" type="checkbox" name="sport" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mt-2 mb-1 gap-2 d-flex justify-content-center">
+                            <div class="col-lg-1 col-1 p-0 m-0 d-flex justify-content-center align-items-center "><span class="seat_row rounded-1">F</span></div>
+                            <div class=" row_seat col-lg-10 col-10 justify-content-lg-center justify-content-start p-0 m-1 mt-0 mb-0 overflow-scroll">
+                                <input class="select_seat c_1" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_2" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_3" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_4" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_5" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_6" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_7" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_8" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_9" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_10" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_11" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_12" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_13" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_14" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_15" type="checkbox" name="sport" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mt-2 mb-1 gap-2 d-flex justify-content-center">
+                            <div class="col-lg-1 col-1 p-0 m-0 d-flex justify-content-center align-items-center "><span class="seat_row rounded-1">G</span></div>
+                            <div class=" row_seat col-lg-10 col-10 justify-content-lg-center justify-content-start p-0 m-1 mt-0 mb-0 overflow-scroll">
+                                <input class="select_seat c_1" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_2" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_3" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_4" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_5" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_6" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_7" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_8" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_9" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_10" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_11" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_12" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_13" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_14" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_15" type="checkbox" name="sport" value="">
+                            </div>
+                        </div>
+                        <div class="row p-0 mt-2 mb-1 gap-2 d-flex justify-content-center">
+                            <div class="col-lg-1 col-1 p-0 m-0 d-flex justify-content-center align-items-center "><span class="seat_row rounded-1">H</span></div>
+                            <div class=" row_seat col-lg-10 col-10 justify-content-lg-center justify-content-start p-0 m-1 mt-0 mb-0 overflow-scroll">
+                                <input class="select_seat c_1" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_2" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_3" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_4" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_5" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_6" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_7" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_8" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_9" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_10" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_11" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_12" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_13" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_14" type="checkbox" name="sport" value="">
+                                <input class="select_seat c_15" type="checkbox" name="sport" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
