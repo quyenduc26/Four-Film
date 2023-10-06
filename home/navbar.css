@@ -1,0 +1,364 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+#menuSecond {
+  display: none;
+}
+#register {
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(244, 92, 45, 1),
+    rgba(243, 210, 93, 1)
+  );
+}
+
+#post {
+  background-color: rgba(16, 16, 16, 1);
+}
+#icon-navbar {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
+}
+#icon-navbar:hover {
+  color: rgba(232, 38, 26, 1);
+}
+.nav-link {
+  color: rgba(255, 255, 255, 1);
+}
+.nav-link:hover {
+  color: rgba(232, 38, 26, 1);
+}
+#nav-function {
+  display: flex;
+  justify-content: flex-end;
+}
+.header {
+  position: fixed;
+  z-index: 9999;
+}
+.container {
+  position: relative;
+}
+#iconUser {
+  color: rgba(255, 255, 255, 1);
+  padding: 8px;
+  border: 3px solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  margin-left: 10px;
+}
+#notification {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Times New Roman", Times, serif;
+}
+#contentNotification {
+  background-color: rgb(0, 0, 0);
+  width: 350px;
+  height: 200px;
+  margin: 250px auto;
+  padding: 20px;
+}
+.button {
+  justify-content: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.modal-content {
+  background-color: rgba(16, 16, 16, 1);
+  width: 350px;
+  height: 400px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+#signup-button {
+  margin-top: 20px;
+}
+#login {
+  margin-top: 30px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+#password {
+  margin-top: 10px;
+}
+.forgot-password {
+  margin: 0px;
+}
+.forgot-passwordLink {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  padding: 0px;
+}
+.forgot-passwordLink:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.button-post {
+  width: 100%;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: rgba(244, 92, 45, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.button-post:hover {
+  background-color: rgba(244, 92, 45, 1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-post:active {
+  transform: scale(0.95);
+}
+.register {
+  text-align: center;
+  margin-top: 5px;
+}
+.registerLink {
+  font-size: 15px;
+  color: rgba(244, 92, 45, 1);
+  text-decoration: none;
+}
+.title {
+  color: rgba(255, 255, 255, 1);
+}
+.register {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 1);
+}
+.password {
+  position: relative;
+  width: 100%;
+}
+#icon_eye {
+  position: absolute;
+  right: 13px;
+  top: 26px;
+}
+#checked_icon {
+  opacity: 0;
+}
+#labelPost {
+  position: relative;
+}
+#errorPost {
+  position: absolute;
+  color: rgba(232, 38, 26, 1);
+}
+
+.modals {
+  z-index: 9999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.modal-contents {
+  background-color: rgba(16, 16, 16, 1);
+  z-index: 9999;
+  width: 350px;
+  height: 440px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#form-register {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#registerButton {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: rgba(244, 92, 45, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#registerButton:hover {
+  background-color: rgba(244, 92, 45, 1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#registerButton:active {
+  transform: scale(0.95);
+}
+#displayContent {
+  color: rgba(232, 38, 26, 1);
+  text-align: center;
+  font-weight: bolder;
+}
+#icon {
+  margin-left: 45%;
+}
+.passwordRegister {
+  position: relative;
+}
+.checked-icons {
+  position: absolute;
+  right: 7px;
+  top: 15px;
+}
+#checked-eye {
+  opacity: 0;
+}
+#checked-eye-second {
+  opacity: 0;
+}
+.input-wrapper {
+  position: relative;
+}
+
+.input-error {
+  color: rgba(232, 38, 26, 1);
+  font-size: 12px;
+  position: absolute;
+  bottom: -20px;
+}
+
+.error {
+  color: rgba(232, 38, 26, 1);
+  font-size: 13px;
+  position: absolute;
+}
+.labelRelative {
+  position: relative;
+}
+#errorEmail {
+  top: 48px;
+  display: block;
+}
+#errorFullname {
+  top: 48px;
+  display: block;
+}
+#errorPassword {
+  top: 48px;
+  display: block;
+}
+
+#headerSidebar {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Times New Roman", Times, serif;
+  overflow-x: hidden;
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  z-index: 9999;
+}
+#headerSidebar.open {
+  transform: translateX(0%);
+}
+#sidebar {
+  background-color: rgba(16, 16, 16, 1);
+  width: 70%;
+  padding: 20px;
+  height: 100%;
+}
+#sidebar-menu {
+  flex-direction: column;
+}
+@media only screen and (max-width: 1024px) {
+  .nav-link {
+    padding: 8px;
+  }
+  #icon-navbar {
+    padding: 12px;
+    padding-left: 8px;
+  }
+  .content-end .nav-link {
+    width: 150px;
+  }
+  .body-wed {
+    position: absolute;
+    top: 60px;
+    background-color: black;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #menuOne {
+    display: none;
+  }
+  #menuSecond {
+    display: block;
+  }
+  #logo {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    object-fit: cover;
+    margin-left: 20px;
+  }
+  .displayMenu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  #icon-menu {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  #sidebar-menu #itemMenuMobile {
+    display: inline-block;
+  }
+  #sidebar-menu #itemMenuMobile:hover {
+    background-color: rgb(75, 77, 78);
+  }
+  .body-wed {
+    position: absolute;
+    top: 60px;
+    background-color: black;
+    width: 1000px;
+  }
+}
