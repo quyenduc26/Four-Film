@@ -1,15 +1,14 @@
 // Tạo một mảng chứa thông tin về các phim
 var movies = [
   {
-      id:'p1',
-      src: "https://bizweb.dktcdn.net/100/330/208/files/hinh-nen-kimetsu-yaiba-ngau-6-1.jpg?v%5Cu003d1649906743187",
-      alt: "Movie 1",
+    id:'p1',
+    src: "https://bizweb.dktcdn.net/100/330/208/files/hinh-nen-kimetsu-yaiba-ngau-6-1.jpg?v%5Cu003d1649906743187",
+    alt: "Movie 1",
     title: "Thanh gương diệt quỷ",
     describe: "Thanh Gươm Diệt Quỷ - phần phim tại Phố Đèn Đỏ cuối cùng cũng đã kết thúc. Sau trận chiến khốc liệt, Tanjiro và Uzui đã thành công chặt đầu Gyutaro. Trong khi đó, Zenitsu và Inosuke hợp sức chặt đầu Daki cùng một lúc. Tuy nhiên, Gyutaro đã giải phóng Huyết thuật của mình và bao phủ khắp toàn bộ khu vực. Tanjiro tỉnh dậy và hội ngộ cùng Nezuko và Zenitsu, nhưng Inosuke và Uzui đang cận kề cái chết vì bị Gyutaro đầu độc.",
-      caption: "Tập 24",
+    Episodes: "Tập 24",
     watchLink: "https://pops.vn/video/thanh-guom-diet-quy-s2-ky-vien-tran-long-tieng-tap-11-du-co-trai-qua-bao-nhieu-vong-luan-hoi-622b084363105c00593da4a8", // Liên kết xem phim 1
-    category: 'anime',
-    anotherName: "Kimetsu no YaibaLưỡi gươm diệt quỷDiệt quỷ cứu nhân",
+    category: 'anime',  
     countryOfManufacture: "japan",
     yearOfRelease: '2019',
     type:"Phiêu lưu"
@@ -47,6 +46,8 @@ var movies = [
     category:'anime'
   },
   ];
+  localStorage.setItem('listMovies', JSON.stringify(movies));
+  var movies = JSON.parse(localStorage.getItem('listMovies')) || [];
 
   var carouselIndicators = document.querySelector(".carousel-indicators");
   var carouselInner = document.querySelector(".carousel-inner");
@@ -135,14 +136,14 @@ movies.forEach(function (movie){
   document.getElementById('music').innerHTML += movieMemory
   }
   else if (movie.category === 'anime') {
-    var movieMemory = `
-    <div class="card" style="width: 12rem; height: 18rem; background-color:black;margin-right: 10px;">
-    <img id="watching" src="${movie.src}" class="card-img-top" alt="..." style="height: 15rem;object-fit: cover;">
-    <div class="card-body" style="padding: 10px 0px">
-      <p class="card-text" style="color:white; text-align:left">${movie.title}</p>
-    </div>
-  </div> `
-  document.getElementById('anime').innerHTML += movieMemory
+  //   var movieMemory = `
+  //   <div class="card" style="width: 12rem; height: 18rem; background-color:black;margin-right: 10px;">
+  //   <img id="watching" src="${movie.src}" class="card-img-top" alt="..." style="height: 15rem;object-fit: cover;">
+  //   <div class="card-body" style="padding: 10px 0px">
+  //     <p class="card-text" style="color:white; text-align:left">${movie.title}</p>
+  //   </div>
+  // </div> `
+  document.getElementById('video').src=movie.src;
   }
   else if (movie.category === 'thể thao') {
     var movieMemory = `

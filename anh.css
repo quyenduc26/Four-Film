@@ -1,0 +1,48 @@
+*::-webkit-scrollbar{
+  display: none;
+}
+html{
+  background-color: black;
+  scrollbar-width: thin;
+  scrollbar-width:none;
+  -ms-overflow-style: none;
+  color: white;
+  font-size: 15px;
+ 
+}
+.container-fluid{
+  background-color: black;
+  color: aliceblue;
+}
+.heading_table{
+  display: flex;
+  
+  white-space: nowrap;
+  color:aliceblue;
+  
+}
+.heading_table div{
+  margin-right: 20px;
+}
+.info_film{
+  font-size: 15px;
+}
+/* .heading_table p{
+  font-size: 20px; */
+/* }
+ ul{
+  display: flex;
+  
+  padding: 0;
+  justify-content: space-between;
+
+}
+h3{
+  color:aliceblue;
+}
+
+.fixed-content{
+  margin-right: 230px;
+  position: relative;
+  color:aliceblue;
+} */

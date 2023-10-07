@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="slider.css" />
+  </head>
+  <body>
+    <div class="header" style="background-color: black; width: 100%">
+      <div class="container" style="background-color: black" id="menuOne">
+        <div class="navbar row" id="menu">
+          <div class="logo-img col-md-1">
+            <a href="#"><img class="col-8" src="Logo.png" alt="" /></a>
+          </div>
+          <ul class="nav col-md-7">
+            <li class="nav-item">
+              <a class="nav-link" id="text" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="text" href="#">Truyền hình</a>
+            </li>
+            <li class="nav-item">
+              <a id="text" class="nav-link" href="#">Phim bộ</a>
+            </li>
+            <li class="nav-item">
+              <a id="text" class="nav-link" href="#">Thể thao</a>
+            </li>
+            <li class="nav-item">
+              <a id="text" class="nav-link" href="#">Thiếu nhi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="text" href="#">Phim chiếu rạp<i></i></a>
+            </li>
+          </ul>
+          <ul class="nav col-md-4" id="nav-function">
+            <li class="nav-item">
+              <a
+                href="search.html"
+                class="fa-solid fa-magnifying-glass nav-link"
+                id="icon-navbar"
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="fa-regular fa-bell nav-link"
+                id="icon-navbar"
+                href="#"
+              ></a>
+            </li>
+            <li class="nav-item">
+              <button class="payment nav-link" id="register">
+                <i class="fa-regular fa-credit-card"></i> Mua gói
+              </button>
+            </li>
+            <li class="nav-item" id="changeItem">
+              <a href="Feature_profile_quyen.html"><i class="fa-solid fa-user" id="iconUser"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        style="background-color: black"
+        class="container mw-100"
+        id="menuSecond"
+      >
+        <div class="container" style="display: flex">
+          <a href="#" id="icon-menu"
+            ><i
+              class="fa-solid fa-bars"
+              style="color: #ffffff"
+              id="displayMenuMobile"
+            ></i
+          ></a>
+          <a href="#"><img id="logo" src="Logo.png" alt="" /></a>
+          <div class="displayMenu">
+            <ul class="nav" id="nav-function">
+              <li class="nav-item">
+                <a
+                  href="search.html"
+                  class="fa-solid fa-magnifying-glass nav-link"
+                  id="icon-navbar"
+                ></a>
+              </li>
+              <li class="nav-item">
+                <button class="payment nav-link" id="register">
+                  <i class="fa-regular fa-credit-card"></i> Mua gói
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="headerSidebar">
+      <div id="sidebar">
+        <ul class="nav" id="sidebar-menu">
+          <li class="nav-item" id="itemMenuMobile">
+            <a class="nav-link" id="singupMobile" href="#"
+              >Đăng nhâp / Đăng Ký</a
+            >
+          </li>
+          <li class="nav-item" id="itemMenuMobile">
+            <a class="nav-link" href="#">Trang chủ</a>
+          </li>
+          <li class="nav-item" id="itemMenuMobile">
+            <a class="nav-link" href="#">Phim bộ</a>
+          </li>
+          <li class="nav-item" id="itemMenuMobile">
+            <a class="nav-link" href="#">Thể thao</a>
+          </li>
+          <li class="nav-item" id="itemMenuMobile">
+            <a class="nav-link" href="#">Thiếu nhi</a>
+          </li>
+          <li class="nav-item" id="itemMenuMobile">
+            <a class="nav-link" href="#">Truyền hình</a>
+          </li>
+          <li class="nav-item" id="itemMenuMobile">
+            <a class="nav-link" href="#">Phim chiếu rạp</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <!-- Nội dung bảng đăng nhập -->
+        <h2 class="title">Đăng Nhập</h2>
+        <form id="login">
+          <!-- Form đăng nhập -->
+          <input type="email" id="email" placeholder="Email" /><br />
+          <label class="password" id="labelPost">
+          <input
+            type="password"
+            id="password"
+            placeholder="Mật khẩu"
+          />
+            <label for="checked_icon" class="checked_icon">
+              <i id="icon_eye" class="fa-solid fa-eye-slash"
+                ><input type="checkbox" id="checked_icon"
+              /></i>
+            </label>
+            <span id="errorPost"></span>
+          </label>
+          <p class="forgot-password">
+            <a class="forgot-passwordLink" id="register-link" href="#"
+              >Quên mật khẩu?</a
+            >
+          </p>
+          <button type="button" class="button-post" id="postButton">
+            Đăng nhập</button
+          ><br />
+          <p class="register">
+            Chưa có tài khoản?
+            <a class="registerLink" id="registerLink" href="#"
+              >Đăng ký miễn phí</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+    <div id="register-modal" class="modals">
+      <div class="modal-contents">
+        <!-- REGISTER -->
+        <h2 class="title">Đăng ký</h2>
+        <form action="" id="form-register">
+          <label class="labelRelative">
+            <input
+              type="email"
+              id="emailRegister"
+              placeholder="Email"
+              class="input-register"
+            />
+            <span id="errorEmail" class="error"></span>
+          </label>
+          <label class="labelRelative">
+            <input type="text" id="fullName" placeholder="Nhập tên bạn muốn" />
+            <span id="errorFullname" class="error"></span>
+          </label>
+          <label class="passwordRegister">
+            <input
+              type="password"
+              placeholder="Nhập mật khẩu bạn muốn tạo"
+              class="input-register"
+              id="passwordFirst"
+              maxlength="12"
+              pattern=".{0,12}"
+              title="Password phải từ 0 đến 12 kí tự"
+              required
+            />
+            <label class="checked-icons">
+              <i id="icon_eyes" class="fa-solid fa-eye-slash"
+                ><input type="checkbox" id="checked-eye"
+              /></i>
+            </label>
+            <span id="errorPassword" class="error"></span>
+          </label>
+          <label for="" class="passwordRegister">
+            <input
+              type="password"
+              placeholder="Nhập lại mật khẩu"
+              class="input-register"
+              id="passwordSecond"
+              maxlength="12"
+              pattern=".{0,12}"
+              title="Password phải từ 0 đến 12 kí tự"
+              required
+            />
+            <label class="checked-icons">
+              <i id="icon_eyes_second" class="fa-solid fa-eye-slash"
+                ><input type="checkbox" id="checked-eye-second"
+              /></i>
+            </label>
+            <span id="errorPasswordSencond" class="error"></span>
+          </label>
+          <button id="registerButton">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+    <div id="notification">
+      <div id="contentNotification">
+        <h1 style="color: coral; text-align: center">Thông báo!</h1>
+        <p
+          id="notificationContent"
+          style="color: #ffffff; text-align: center"
+        ></p>
+        <div class="button d-flex gap-5">
+          <button
+            style="
+              background-color: coral;
+              padding: 10px;
+              border-radius: 10px;
+              width: 100px;
+            "
+            id="home"
+          >
+            <a style="text-decoration: none; color: #ffffff" href="#"
+              >Trang chủ</a
+            >
+          </button>
+          <button
+            style="
+              background-color: coral;
+              padding: 10px;
+              border-radius: 10px;
+              width: 100px;
+              color: #ffffff;
+            "
+            id="next"
+          >
+            Tiếp tục
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="body-wed">
+      <div class="container" id="content-body">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <!-- Các button indicators được tạo bằng JavaScript sẽ được thêm vào đây -->
+          </div>
+          <div class="carousel-inner">
+            <!-- Các carousel item được tạo bằng JavaScript sẽ được thêm vào đây -->
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="category">
+          <h4 id="titles">Danh mục</h4>
+          <div class="slider-container">
+            <div class="slider">
+              <a class="slider-item" href="trangCt.html" >
+                <i
+                  class="fa-solid fa-film"
+                  id="iconCategory"
+                  style="color: #ffffff"
+                ></i>
+                <span id="titleCard">Phim bộ</span>
+              </a>
+              <a href="#" class="slider-item">
+                <i
+                  class="fa-solid fa-basketball"
+                  id="iconCategory"
+                  style="color: #ffffff"
+                ></i>
+                <span id="titleCard">Thể thao</span>
+              </a>
+              <a href="#" class="slider-item">
+                <i
+                  class="fa-solid fa-music"
+                  id="iconCategory"
+                  style="color: #ffffff"
+                ></i>
+                <span id="titleCard">Nhạc</span>
+              </a>
+              <a href="#" class="slider-item">
+                <i
+                  class="fa-solid fa-masks-theater"
+                  id="iconCategory"
+                  style="color: #ffffff"
+                ></i>
+                <span id="titleCard">Giải trí</span>
+              </a>
+              <a  href="trangCt.html"  onclick="showDetail()" class="slider-item">
+                <i
+                  class="fa-solid fa-film"
+                  id="iconCategory"
+                  style="color: #ffffff"
+                ></i>
+                <span id="titleCard">Anime</span>
+              </a>
+              <a href="#" class="slider-item">
+                <i
+                  class="fa-solid fa-film"
+                  id="iconCategory"
+                  style="color: #ffffff"
+                ></i>
+                <span id="titleCard">Phim hành đông</span>
+              </a>
+              <a href="#" class="slider-item">
+                <i
+                  class="fa-solid fa-film"
+                  id="iconCategory"
+                  style="color: #ffffff"
+                ></i>
+                <span id="titleCard">Phim kinh dị</span>
+              </a>
+              <a href="#" class="slider-item">
+                <i
+                  class="fa-solid fa-film"
+                  id="iconCategory"
+                  style="color: #ffffff"
+                ></i>
+                <span id="titleCard">Phim Drama</span>
+              </a>
+            </div>
+            <button class="slider-control prev-button" id="left">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-control next-button" id="right">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="series-movie">
+          <h4 id="titles">Phim bộ</h4>
+          <div class="slider-container">
+            <div class="slider" id="series">
+              <!-- add film-->
+            </div>
+            <button class="slider-control prev-button" id="left">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-control next-button" id="right">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="music">
+          <h4 id="titles">Âm nhạc</h4>
+          <div id="slider-container">
+            <div class="slider" id="music">
+              <!-- add film-->
+            </div>
+            <button class="slider-control prev-button" id="left">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-control next-button" id="right">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="sport">
+          <h4 id="titles">Thể thao</h4>
+          <div id="slider-container">
+            <div class="slider" id="sport">
+              <!-- add film-->
+            </div>
+            <button class="slider-control prev-button" id="left">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-control next-button" id="right">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <button class="anime">
+          <h4 id="titles">Anime</h4>
+          <div id="slider-container">
+            <div class="slider" id="anime">
+              <!-- add film-->
+            </div>
+            <button class="slider-control prev-button" id="left">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-control next-button" id="right">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </button>
+        <div class="movie-theaters">
+          <h4 id="titles">Phim chiếu rạp</h4>
+          <div id="slider-container">
+            <div class="slider" id="theaters">
+              <!-- add film-->
+            </div>
+            <button class="slider-control prev-button" id="left">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-control next-button" id="right">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="end-wed">
+          <hr />
+          <div class="embrace d-flex">
+            <div class="img-end">
+              <img id="logo-end" src="Logo.png" alt="" />
+            </div>
+            <div class="content-end d-flex">
+              <ul class="nav" id="nav-end">
+                <li class="nav-item">
+                  <a class="nav-link" id="title-end">Về 4film</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" style="width: 150px" class="nav-link"
+                    >Các gói dịch vụ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">liên hệ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Trung tâm hỗ trợ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Thông tin</a>
+                </li>
+              </ul>
+              <ul class="nav" id="nav-end">
+                <li class="nav-item">
+                  <a class="nav-link" id="title-end">Dịch vụ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Gói data</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Quảng cáo</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Mua gói</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Bảo hành</a>
+                </li>
+              </ul>
+              <ul class="nav" id="nav-end">
+                <li class="nav-item">
+                  <a class="nav-link" id="title-end">Quy định</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Điều khoản sử dụng</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Chính sách thanh toán</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"
+                    >Chính sách bảo mật thông tin và dữ liệu</a
+                  >
+                </li>
+              </ul>
+              <div id="nav-end" class="support-end">
+                <span class="support"
+                  ><i class="fa-solid fa-phone" style="color: #ffffff"></i>
+                  19006600</span
+                ><br />
+                <span class="support"
+                  ><i class="fa-solid fa-envelope" style="color: #ffffff"></i>
+                  hotrofptplay@4film.com</span
+                >
+                <br />
+                <div>
+                  <span class="support">Theo dõi chúng tôi trên:</span>
+                  <br />
+                  <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
+                  <i class="fa-brands fa-youtube" style="color: #ffffff"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="content-end-second d-flex">
+            <p class="introduction">
+              Công ty Cổ phần Viễn Thông FPT - Người đại diện: Ông Hoàng Việt
+              Anh. Trụ sở: Tầng 2, Tòa nhà FPT Cầu Giấy, Số 17 Phố Duy Tân,
+              Phường Dịch Vọng Hậu, Quận Cầu Giấy, TP.Hà Nội Số giấy chứng nhận
+              đăng ký kinh doanh: 0101778163 do Sở Kế Hoạch Đầu Tư Thành Phố Hà
+              Nội cấp vào ngày 28/07/2005. Giấy phép cung cấp Dịch vụ Phát
+              thanh, Truyền hình trên mạng Internet cấp lần đầu ngày 18/11/2016,
+              cấp lại theo Giấy phép số 99/GP-BTTTT ngày 27/03/2023.
+            </p>
+            <div class="operating-system">
+              <i class="fa-brands fa-android" style="color: #ffffff"></i>
+              <i class="fa-brands fa-apple" style="color: #ffffff"></i>
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              <i class="fa-solid fa-laptop" style="color: #ffffff"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="navbar.js"></script>
+  <script src="home.js"></script>
+  <script src="slider.js"></script>
+</html>

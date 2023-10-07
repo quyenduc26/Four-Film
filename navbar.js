@@ -24,11 +24,6 @@ document.addEventListener('DOMContentLoaded',function(){
     var accountList = accountListJSON ? JSON.parse(accountListJSON) : [];
 
 
-    var user = {
-      email : email,
-      password : password,
-      name: name,
-  }
   singupMobile.addEventListener('click', function() {
     signupModal.style.display = "block";
     menuMobile.classList.toggle("open");
@@ -109,7 +104,7 @@ document.addEventListener('DOMContentLoaded',function(){
             const foundUser = data.find(user =>showPassword.value === user.password && user.infoAccount === emailPost.value);
            
             if (foundUser) {
-              const iconUser = `<i class="fa-solid fa-user" id="iconUser"></i>`;
+              const iconUser = `<a href="Feature_profile_quyen.html"><i class="fa-solid fa-user" id="iconUser"></i></a>`;
               document.getElementById('changeItem').innerHTML = iconUser;
               signupModal.style.display = 'none';
             } else {
