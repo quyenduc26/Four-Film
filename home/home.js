@@ -1,13 +1,14 @@
 // Tạo một mảng chứa thông tin về các phim
 var movies = [
-{
+  {
+  display:false,
     id:'p1',
     src: "https://bizweb.dktcdn.net/100/330/208/files/hinh-nen-kimetsu-yaiba-ngau-6-1.jpg?v%5Cu003d1649906743187",
     alt: "Movie 1",
   title: "Thanh gương diệt quỷ",
   describe: "Thanh Gươm Diệt Quỷ - phần phim tại Phố Đèn Đỏ cuối cùng cũng đã kết thúc. Sau trận chiến khốc liệt, Tanjiro và Uzui đã thành công chặt đầu Gyutaro. Trong khi đó, Zenitsu và Inosuke hợp sức chặt đầu Daki cùng một lúc. Tuy nhiên, Gyutaro đã giải phóng Huyết thuật của mình và bao phủ khắp toàn bộ khu vực. Tanjiro tỉnh dậy và hội ngộ cùng Nezuko và Zenitsu, nhưng Inosuke và Uzui đang cận kề cái chết vì bị Gyutaro đầu độc.",
   episodes: "Tập 24",
-  watchLink: "https://pops.vn/video/thanh-guom-diet-quy-s2-ky-vien-tran-long-tieng-tap-11-du-co-trai-qua-bao-nhieu-vong-luan-hoi-622b084363105c00593da4a8", // Liên kết xem phim 1
+  watchLink: "https://www.youtube.com/embed/Ypil56yin2M", // Liên kết xem phim 1
   category: 'anime',
   anotherName: "Kimetsu no YaibaLưỡi gươm diệt quỷDiệt quỷ cứu nhân",
   countryOfManufacture: "japan",
@@ -16,14 +17,16 @@ var movies = [
     author: 'Đặng vĂn Sinh',
     actor:"sinh-loan-anh-quyền"
 },
-{
+  {
+    
+    display:false,
     id:'p2',
     src: "https://riki.edu.vn/wp-content/uploads/2019/10/14775-768x1121.jpg",
     alt: "Movie 1",
   title: "Lá thư gửi Momo (A letter to Momo)",
   describe: "“Lá thư gửi Momo” được công chiếu và giới thiệu lần đầu tiên vào năm 2011. Khi vừa ra mắt, bộ phim này đã tạo nên một làn sóng mới với hiệu ứng người xem rất tốt và nhanh chóng đạt được nhiều giải thưởng. Bộ phim hội tụ đủ mọi yếu tố: hài hước, phiêu lưu, thần thoại. Vừa ý nghĩa vừa có tính nhân văn sâu sắc. Hãy xem để nhận ra cuộc sống đáng quý và cần được nâng niu ra sao. Xem để sống chậm lại, nghĩ khác đi và yêu thương nhiều hơn…",
   episodes: "Tập 1",
-  watchLink: "https://pops.vn/video/thanh-guom-diet-quy-s2-ky-vien-tran-long-tieng-tap-11-du-co-trai-qua-bao-nhieu-vong-luan-hoi-622b084363105c00593da4a8", // Liên kết xem phim 1
+  watchLink: "https://www.youtube.com/embed/SA3j3ev8dqE", // Liên kết xem phim 1
   category: 'anime',
   countryOfManufacture: "japan",
   yearOfRelease: '2010',
@@ -32,6 +35,7 @@ var movies = [
     actor:"sinh-loan-anh-quyền"
   },
   {
+    display:false,
     id:'p3',
     src: "https://th.bing.com/th/id/R.9082926e4c15ed8eb3d132d7b8d0d58b?rik=4djG0dLea0wG2A&pid=ImgRaw&r=0",
     alt: "Movie 1",
@@ -47,6 +51,7 @@ var movies = [
     actor:"sinh-loan-anh-quyền"
   },
   {
+    display:false,
     id:'p4',
     src: "https://th.bing.com/th/id/R.9082926e4c15ed8eb3d132d7b8d0d58b?rik=4djG0dLea0wG2A&pid=ImgRaw&r=0",
     alt: "Movie 1",
@@ -62,6 +67,7 @@ var movies = [
     actor:"sinh-loan-anh-quyền"
   },
   {
+    display:false,
     id:'p5',
     src: "https://th.bing.com/th/id/R.9082926e4c15ed8eb3d132d7b8d0d58b?rik=4djG0dLea0wG2A&pid=ImgRaw&r=0",
     alt: "Movie 1",
@@ -77,6 +83,7 @@ var movies = [
     actor:"sinh-loan-anh-quyền"
   },
   {
+    display:false,
     id:'p6',
     src: "https://th.bing.com/th/id/R.9082926e4c15ed8eb3d132d7b8d0d58b?rik=4djG0dLea0wG2A&pid=ImgRaw&r=0",
     alt: "Movie 1",
@@ -92,6 +99,7 @@ var movies = [
     actor:"sinh-loan-anh-quyền"
   },
   {
+    display:false,
     id:'p7',
     src: "https://th.bing.com/th/id/R.9082926e4c15ed8eb3d132d7b8d0d58b?rik=4djG0dLea0wG2A&pid=ImgRaw&r=0",
     alt: "Movie 1",
@@ -107,11 +115,15 @@ var movies = [
     actor:"sinh-loan-anh-quyền"
 }
   ];
+  const jsonString = JSON.stringify(movies);
+localStorage.setItem('myArray', jsonString);
+const getJsonString = localStorage.getItem('myArray');
+const myArray = JSON.parse(getJsonString);
 
   var carouselIndicators = document.querySelector(".carousel-indicators");
   var carouselInner = document.querySelector(".carousel-inner");
 
-  movies.forEach(function (movie, index) {
+  myArray.forEach(function (movie, index) {
     var indicatorButton = document.createElement("button");
     indicatorButton.category = "button";
     indicatorButton.dataset.bsTarget = "#carouselExampleIndicators";
@@ -224,4 +236,20 @@ movies.forEach(function (movie){
   </div> `
   document.getElementById('theaters').innerHTML += movieMemory
   }
+})
+var moviess = document.querySelectorAll('.card');
+
+// Gắn sự kiện nhấp chuột cho mỗi phần tử phim
+moviess.forEach(function (movie) {
+  movie.addEventListener('click', function () {
+    // Lấy giá trị định danh của phim được nhấp chuột
+    var movieId = movie.getAttribute('data-id')
+    myArray.forEach(function (detail) {
+      if (movieId == detail.id) {
+        detail.display = true
+        localStorage.setItem('myArray', JSON.stringify(myArray));
+        window.location.href = 'detail.html'
+      }
+    })
+  })
 })
