@@ -302,7 +302,7 @@ async function postData(data,api) {
 async function modifyData(data,api){
   try {
     const response = await fetch(api, {
-      method: 'PUT',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -322,9 +322,10 @@ async function modifyData(data,api){
 
 
 // RUNNING FUNCTIONS
-getData(apiMainStorage)
-  .then(main => console.log(main))
-  .catch(main => alert('Phát hiện lỗi trong quá trình lấy dữ liệu. Vui lòng tải lại trang'));
+start(apiMainStorage)
+start(apiMovies)
+
+
 
 
 
