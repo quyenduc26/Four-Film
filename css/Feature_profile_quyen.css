@@ -21,6 +21,9 @@ body{
     font-size: 15px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+*::-webkit-scrollbar {
+    display: none; 
+}
 .horizon_line{
     /* display: block; */
     height: 1px;
@@ -51,12 +54,12 @@ body{
     white-space: nowrap;
 }
 .brief{
-    color: antiquewhite;
+    color: rgb(250, 250, 250);
 }
 img{
     border-radius: 50%;
 }
-.phone_nb{
+.userAccount{
     font-weight: bolder;
     font-size: 20px;
 }
@@ -70,6 +73,7 @@ img{
 }
 .modal-content{
     background-color: rgb(87, 87, 87);
+    color: white;
 }
 .nav_item:hover {
     background-color: var(--nav-color);

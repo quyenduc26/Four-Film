@@ -308,12 +308,6 @@ async function modifyData(data,api){
       },
       body: JSON.stringify(data),
     });
-    if (response) {
-      const dataAdded = await response.json();
-      console.log('Data modified:', dataAdded);
-    } else {
-      console.error('Failed to modify data:', response.statusText);
-    }
   } catch (error) {
     console.error('Error:', error);
   }

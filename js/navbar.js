@@ -101,13 +101,13 @@ document.addEventListener('DOMContentLoaded',function(){
         fetch(apiURL)
           .then(response => response.json())
           .then(data => {
-            const foundUser = data.find(user =>showPassword.value === user.password && user.infoAccount === emailPost.value);
+            const foundUser = data.find(user =>showPassword.value === user.password && user.email === emailPost.value);
             if (foundUser) {
 
               let userInfo = JSON.parse(localStorage.getItem('userInfo')) || [];
               let a = [showPassword.value,emailPost.value]
               localStorage.setItem('userInfo', JSON.stringify(userInfo));
-              userInfo.push(a);
+              userInfo.splice(0,0,a);
               localStorage.setItem('userInfo', JSON.stringify(userInfo));
 
 
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded',function(){
       if (isValid) {
         const newUser = {
           userAccount: fullName,
-          infoAccount:email,
+          email:email,
           password: passwordFirst,     
         };
     
@@ -500,5 +500,3 @@ nextButton.addEventListener('click', () => {
 
 
 //Profile
-const getUserList = require('Feature_profile_quyen.js');
-console.log(start());
