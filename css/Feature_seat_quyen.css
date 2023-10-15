@@ -54,11 +54,14 @@ button{
     height: 20px;
     border-radius: 2px;
 }
+.seat_0{
+    background-color: var(--selection);
+}
 .seat_1{
     background-color: var(--lying);
 }
 .seat_2{
-    background-color: var(--selection);
+    background-color: var(--normal-text);
 }
 .seat_3{
     background-color: var(--couple-seat);
