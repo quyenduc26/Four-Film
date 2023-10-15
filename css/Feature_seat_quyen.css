@@ -13,15 +13,16 @@
     --nav-text-color:rgb(152, 156, 159);
     --instruction-text:rgba(32, 31, 28, 1);
     --background-color: rgba(16, 16, 16, 1);
-    --vip: #d4b15f;
-    --matxa:#de128c; 
+    --vip: #eead16;
+    --matxa:#de128c;
+    --lying: rgb(25, 215, 233); 
 }
 body{
     background-color: black;
 }
 .nav{
     background-color: var(--nav-color);
-    color: white;
+    color: var(--normal-text);
 }
 .nav .nav-item p{
     font-size: 10px;
@@ -30,6 +31,11 @@ body{
     background-color: var(--nav-color);
     font-size: 12px;
     color: var(--nav-text-color);
+}
+button{
+    color: var(--normal-text);
+    font-weight: 700;
+    background-color: var(--button);
 }
 .legend{
     display: block;
@@ -40,6 +46,7 @@ body{
     font-weight:600;
     margin: 10px;
     margin-bottom: 0px;
+    color: var(--normal-text);
 }
 .seat_ins{
     display: inline-block;
@@ -48,7 +55,7 @@ body{
     border-radius: 2px;
 }
 .seat_1{
-    background-color: pink;
+    background-color: var(--lying);
 }
 .seat_2{
     background-color: var(--selection);
@@ -117,7 +124,7 @@ body{
 }
 .seat[data-selected="true"] {
     box-shadow: 0 0 8px #00b300;
-    background-color: #00b300;
+    background-color: #00b300!important;
     text-indent: 0;
 }
 .seat[data-selected="true"] + p{
@@ -128,8 +135,17 @@ body{
 .seat[data-available="false"] {
     opacity: 0.5;
     box-shadow: 0 0 1px #000000;
-    background-color: #3f433f;
+    background-color: #3f433f!important;
 }
-
-
-
+.seat[data-price='200000']{
+    background-color: var(--matxa);
+}
+.seat[data-price='300000']{
+    background-color: var(--vip);
+}
+.seat[data-price='150000']{
+    background-color: var(--lying);
+}
+.seat[data-price='250000']{
+    background-color: var(--couple-seat);
+}
