@@ -89,3 +89,12 @@ hr {
   gap: 10px;
   font-size: 20px;
 }
+#home {
+  color: white;
+}
+#text{
+  color: rgb(111, 109, 109);
+}
+.card {
+  cursor: pointer;
+}

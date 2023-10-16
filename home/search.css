@@ -1,0 +1,60 @@
+.body-search {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  background-color: black;
+  height: 100%;
+}
+.container {
+  background-color: black;
+}
+.input-group-text {
+  display: flex;
+  gap: 10px;
+  background-color: #403c3c;
+  border: 0px;
+  width: 100%;
+  color: white;
+}
+
+.input-group {
+  width: 100%;
+}
+
+#search-input {
+  background-color: #5a5757;
+  color: white;
+  outline: none;
+  height: 100%;
+}
+
+#icon-search {
+  color: white;
+}
+
+.film-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.film-poster {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.film-details {
+  margin-left: 10px;
+}
+
+#button-search {
+  background-color: red;
+  color: white;
+  width: 5%;
+  height: 100%;
+  border-radius: 10px;
+}

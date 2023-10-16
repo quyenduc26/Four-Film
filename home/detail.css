@@ -35,8 +35,7 @@ p {
   font-size: 20px;
 }
 
-h2 {
-  margin-left: 90px;
+#h2 {
   color: white;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -104,4 +103,25 @@ hr {
 }
 #author-item {
   font-size: 16px;
+}
+#body_detail {
+  position: absolute;
+  top: 50px;
+  background-color: black;
+  width: 100%;
+}
+
+.content {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slider {
+  display: flex;
+}
+
+.card {
+  cursor: pointer;
 }

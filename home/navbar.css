@@ -323,8 +323,14 @@ input {
     background-color: black;
     width: 100%;
   }
+  #body_detail {
+    position: absolute;
+    top: 50px;
+    background-color: black;
+    width: 100%;
+  }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   #menuOne {
     display: none;
   }
@@ -358,6 +364,12 @@ input {
   .body-wed {
     position: absolute;
     top: 60px;
+    background-color: black;
+    width: 1000px;
+  }
+  #body_detail {
+    position: absolute;
+    top: 50px;
     background-color: black;
     width: 1000px;
   }
