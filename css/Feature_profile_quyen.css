@@ -68,8 +68,12 @@ img{
 }
 .info_text{
     margin-left: 20px;
-    color: white;
+    color: var(--normal-text);
     text-decoration: none;
+}
+.change{
+    background-color: var(--button);
+    
 }
 .modal-content{
     background-color: rgb(87, 87, 87);
