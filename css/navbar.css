@@ -28,6 +28,7 @@
 }
 .nav-link {
   color: rgba(255, 255, 255, 1);
+  font-weight: bolder;
 }
 .nav-link:hover {
   color: rgba(232, 38, 26, 1);
@@ -193,7 +194,7 @@ input {
   background-color: rgba(16, 16, 16, 1);
   z-index: 9999;
   width: 350px;
-  height: 440px;
+  height: 460px;
   margin: 100px auto;
   padding: 20px;
   border-radius: 10px;
@@ -325,6 +326,16 @@ input {
   }
 }
 @media only screen and (max-width: 768px) {
+  #body_detail {
+    width: 1000px;
+  }
+  #itemMenuMobile .nav-link {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .nav-link {
+    font-weight: lighter;
+  }
   #menuOne {
     display: none;
   }

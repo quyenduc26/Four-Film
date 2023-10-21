@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video Slider</title>
+    <title>Document</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,14 +14,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/IT_Project/css/slider.css" />
-    <link rel="stylesheet" href="/IT_Project/css/trangCt.css" />
     <link rel="stylesheet" href="/IT_Project/css/navbar.css" />
+    <link rel="stylesheet" href="/IT_Project/css/series-movie.css" />
   </head>
   <body>
     <div class="header" style="background-color: black; width: 100%">
@@ -40,7 +45,9 @@
               <a class="nav-link" id="text" href="music.html">Âm nhạc</a>
             </li>
             <li class="nav-item">
-              <a id="text" class="nav-link" href="series-movie.html">Phim bộ</a>
+              <a id="movie" class="nav-link" href="series-movie.html"
+                >Phim bộ</a
+              >
             </li>
             <li class="nav-item">
               <a id="text" class="nav-link" href="sport.html">Thể thao</a>
@@ -91,9 +98,7 @@
               id="displayMenuMobile"
             ></i
           ></a>
-          <a href="#"
-            ><img id="logo" src="/IT_Project/img/Logo.png" alt=""
-          /></a>
+          <a href="#"><img id="logo" src="/IT_Project/img/Logo.png" alt="" /></a>
           <div class="displayMenu">
             <ul class="nav" id="nav-function">
               <li class="nav-item">
@@ -277,131 +282,146 @@
         </div>
       </div>
     </div>
-    <div id="body_detail">
-      <div id="video-container" class="container">
-        <div id="watched"></div>
-
-        <div id="contentFlim">
-          <!--content-->
-        </div>
-      </div>
-      <div class="movies container">
-        <h4 id="titles">Nội dung liên quan</h4>
-        <div id="slider-container">
-          <div class="slider" id="type">
-            <!-- add film-->
+    <div class="body-wed">
+      <div class="container" id="content-body">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          style="background-color: black"
+        >
+          <div class="carousel-indicators">
+            <!-- Các button indicators được tạo bằng JavaScript sẽ được thêm vào đây -->
           </div>
-          <button class="slider-control prev-button" id="left">
-            <i class="fas fa-chevron-left"></i>
+          <div class="carousel-inner">
+            <!-- Các carousel item được tạo bằng JavaScript sẽ được thêm vào đây -->
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
           </button>
-          <button class="slider-control next-button" id="right">
-            <i class="fas fa-chevron-right"></i>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
-      <div class="end-wed container">
-        <hr />
-        <div class="embrace d-flex">
-          <div class="img-end">
-            <img id="logo-end" src="/IT_Project/img/Logo.png" alt="" />
-          </div>
-          <div class="content-end d-flex">
-            <ul class="nav" id="nav-end">
-              <li class="nav-item">
-                <a class="nav-link" id="title-end">Về 4film</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Giới thiệu</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" style="width: 150px" class="nav-link"
-                  >Các gói dịch vụ</a
+        <div class="category">
+          <h2 class="title">Danh sách phim</h2>
+          <div id="film" class="row"></div>
+        </div>
+        <div class="end-wed">
+          <hr />
+          <div class="embrace d-flex">
+            <div class="img-end">
+              <img id="logo-end" src="/IT_Project/img/Logo.png" alt="" />
+            </div>
+            <div class="content-end d-flex">
+              <ul class="nav" id="nav-end">
+                <li class="nav-item">
+                  <a class="nav-link" id="title-end">Về 4film</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" style="width: 150px" class="nav-link"
+                    >Các gói dịch vụ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">liên hệ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Trung tâm hỗ trợ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Thông tin</a>
+                </li>
+              </ul>
+              <ul class="nav" id="nav-end">
+                <li class="nav-item">
+                  <a class="nav-link" id="title-end">Dịch vụ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Gói data</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Quảng cáo</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Mua gói</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Bảo hành</a>
+                </li>
+              </ul>
+              <ul class="nav" id="nav-end">
+                <li class="nav-item">
+                  <a class="nav-link" id="title-end">Quy định</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Điều khoản sử dụng</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Chính sách thanh toán</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"
+                    >Chính sách bảo mật thông tin và dữ liệu</a
+                  >
+                </li>
+              </ul>
+              <div id="nav-end" class="support-end">
+                <span class="support"
+                  ><i class="fa-solid fa-phone" style="color: #ffffff"></i>
+                  19006600</span
+                ><br />
+                <span class="support"
+                  ><i class="fa-solid fa-envelope" style="color: #ffffff"></i>
+                  hotrofptplay@4film.com</span
                 >
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">liên hệ</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Trung tâm hỗ trợ</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Thông tin</a>
-              </li>
-            </ul>
-            <ul class="nav" id="nav-end">
-              <li class="nav-item">
-                <a class="nav-link" id="title-end">Dịch vụ</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Gói data</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Quảng cáo</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Mua gói</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Bảo hành</a>
-              </li>
-            </ul>
-            <ul class="nav" id="nav-end">
-              <li class="nav-item">
-                <a class="nav-link" id="title-end">Quy định</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Điều khoản sử dụng</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Chính sách thanh toán</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link"
-                  >Chính sách bảo mật thông tin và dữ liệu</a
-                >
-              </li>
-            </ul>
-            <div id="nav-end" class="support-end">
-              <span class="support"
-                ><i class="fa-solid fa-phone" style="color: #ffffff"></i>
-                19006600</span
-              ><br />
-              <span class="support"
-                ><i class="fa-solid fa-envelope" style="color: #ffffff"></i>
-                hotrofptplay@4film.com</span
-              >
-              <br />
-              <div>
-                <span class="support">Theo dõi chúng tôi trên:</span>
                 <br />
-                <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
-                <i class="fa-brands fa-youtube" style="color: #ffffff"></i>
+                <div>
+                  <span class="support">Theo dõi chúng tôi trên:</span>
+                  <br />
+                  <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
+                  <i class="fa-brands fa-youtube" style="color: #ffffff"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <hr />
-        <div class="content-end-second d-flex">
-          <p class="introduction">
-            Công ty Cổ phần Viễn Thông FPT - Người đại diện: Ông Hoàng Việt Anh.
-            Trụ sở: Tầng 2, Tòa nhà FPT Cầu Giấy, Số 17 Phố Duy Tân, Phường Dịch
-            Vọng Hậu, Quận Cầu Giấy, TP.Hà Nội Số giấy chứng nhận đăng ký kinh
-            doanh: 0101778163 do Sở Kế Hoạch Đầu Tư Thành Phố Hà Nội cấp vào
-            ngày 28/07/2005. Giấy phép cung cấp Dịch vụ Phát thanh, Truyền hình
-            trên mạng Internet cấp lần đầu ngày 18/11/2016, cấp lại theo Giấy
-            phép số 99/GP-BTTTT ngày 27/03/2023.
-          </p>
-          <div class="operating-system">
-            <i class="fa-brands fa-android" style="color: #ffffff"></i>
-            <i class="fa-brands fa-apple" style="color: #ffffff"></i>
-            <i class="fa-solid fa-globe" style="color: #ffffff"></i>
-            <i class="fa-solid fa-laptop" style="color: #ffffff"></i>
+          <hr />
+          <div class="content-end-second d-flex">
+            <p class="introduction">
+              Công ty Cổ phần Viễn Thông FPT - Người đại diện: Ông Hoàng Việt
+              Anh. Trụ sở: Tầng 2, Tòa nhà FPT Cầu Giấy, Số 17 Phố Duy Tân,
+              Phường Dịch Vọng Hậu, Quận Cầu Giấy, TP.Hà Nội Số giấy chứng nhận
+              đăng ký kinh doanh: 0101778163 do Sở Kế Hoạch Đầu Tư Thành Phố Hà
+              Nội cấp vào ngày 28/07/2005. Giấy phép cung cấp Dịch vụ Phát
+              thanh, Truyền hình trên mạng Internet cấp lần đầu ngày 18/11/2016,
+              cấp lại theo Giấy phép số 99/GP-BTTTT ngày 27/03/2023.
+            </p>
+            <div class="operating-system">
+              <i class="fa-brands fa-android" style="color: #ffffff"></i>
+              <i class="fa-brands fa-apple" style="color: #ffffff"></i>
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              <i class="fa-solid fa-laptop" style="color: #ffffff"></i>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/IT_Project/js/trangCt.js"></script>
-  <!-- <script src="home.js"></script> -->
+  <script src="/IT_Project/js/navbar.js"></script>
+  <script src="/IT_Project/js/series-movie.js"></script>
 </html>

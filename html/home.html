@@ -28,23 +28,25 @@
       <div class="container" style="background-color: black" id="menuOne">
         <div class="navbar row" id="menu">
           <div class="logo-img col-md-1">
-            <a href="#"><img class="col-8" src="/IT_Project/img/Logo.png" alt="" /></a>
+            <a href="home.html"
+              ><img class="col-8" src="/IT_Project/img/Logo.png" alt=""
+            /></a>
           </div>
           <ul class="nav col-md-7">
             <li class="nav-item">
-              <a class="nav-link" id="text" href="#">Trang chủ</a>
+              <a class="nav-link" id="home" href="home.html">Trang chủ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="text" href="#">Truyền hình</a>
+              <a class="nav-link" id="text" href="music.html">Âm nhạc</a>
             </li>
             <li class="nav-item">
-              <a id="text" class="nav-link" href="#">Phim bộ</a>
+              <a id="text" class="nav-link" href="series-movie.html">Phim bộ</a>
             </li>
             <li class="nav-item">
-              <a id="text" class="nav-link" href="#">Thể thao</a>
+              <a id="text" class="nav-link" href="sport.html">Thể thao</a>
             </li>
             <li class="nav-item">
-              <a id="text" class="nav-link" href="#">Thiếu nhi</a>
+              <a id="text" class="nav-link" href="anime.html">Thiếu nhi</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="text" href="#">Phim chiếu rạp<i></i></a>
@@ -89,7 +91,9 @@
               id="displayMenuMobile"
             ></i
           ></a>
-          <a href="#"><img id="logo" src="/IT_Project/img/Logo.png" alt="" /></a>
+          <a href="#"
+            ><img id="logo" src="/IT_Project/img/Logo.png" alt=""
+          /></a>
           <div class="displayMenu">
             <ul class="nav" id="nav-function">
               <li class="nav-item">
@@ -118,19 +122,19 @@
             >
           </li>
           <li class="nav-item" id="itemMenuMobile">
-            <a class="nav-link" href="#">Trang chủ</a>
+            <a class="nav-link" href="home.html">Trang chủ</a>
           </li>
           <li class="nav-item" id="itemMenuMobile">
-            <a class="nav-link" href="#">Phim bộ</a>
+            <a class="nav-link" href="series-movie.html">Phim bộ</a>
           </li>
           <li class="nav-item" id="itemMenuMobile">
-            <a class="nav-link" href="#">Thể thao</a>
+            <a class="nav-link" href="sport.html">Thể thao</a>
           </li>
           <li class="nav-item" id="itemMenuMobile">
-            <a class="nav-link" href="#">Thiếu nhi</a>
+            <a class="nav-link" href="anime.html">Thiếu nhi</a>
           </li>
           <li class="nav-item" id="itemMenuMobile">
-            <a class="nav-link" href="#">Truyền hình</a>
+            <a class="nav-link" href="music.html">Âm nhạc</a>
           </li>
           <li class="nav-item" id="itemMenuMobile">
             <a class="nav-link" href="#">Phim chiếu rạp</a>
@@ -150,6 +154,10 @@
               type="password"
               id="password"
               placeholder="Mật khẩu"
+              maxlength="12"
+              pattern=".{0,12}"
+              title="Password phải từ 0 đến 12 kí tự"
+              required
             />
             <label for="checked_icon" class="checked_icon">
               <i id="icon_eye" class="fa-solid fa-eye-slash"
@@ -199,6 +207,10 @@
               placeholder="Nhập mật khẩu bạn muốn tạo"
               class="input-register"
               id="passwordFirst"
+              maxlength="12"
+              pattern=".{0,12}"
+              title="Password phải từ 0 đến 12 kí tự"
+              required
             />
             <label class="checked-icons">
               <i id="icon_eyes" class="fa-solid fa-eye-slash"
@@ -246,7 +258,7 @@
             "
             id="home"
           >
-            <a style="text-decoration: none; color: #ffffff" href="#"
+            <a style="text-decoration: none; color: #ffffff" href="home.html"
               >Trang chủ</a
             >
           </button>
@@ -301,7 +313,7 @@
           <h4 id="titles">Danh mục</h4>
           <div class="slider-container">
             <div class="slider">
-              <a class="slider-item" href="/IT_Project/html/trangCt.html">
+              <a class="slider-item" href="#">
                 <i
                   class="fa-solid fa-film"
                   id="iconCategory"
@@ -528,12 +540,13 @@
           <hr />
           <div class="content-end-second d-flex">
             <p class="introduction">
-              Công ty Cổ phần Viễn Thông FPT - Người đại diện: Ông Nguyễn Đức Quyền. Trụ sở: Tầng 2, Tòa nhà FPT Cầu Giấy, Số 17 Phố Duy Tân,
+              Công ty Cổ phần Viễn Thông FPT - Người đại diện: Ông Hoàng Việt
+              Anh. Trụ sở: Tầng 2, Tòa nhà FPT Cầu Giấy, Số 17 Phố Duy Tân,
               Phường Dịch Vọng Hậu, Quận Cầu Giấy, TP.Hà Nội Số giấy chứng nhận
               đăng ký kinh doanh: 0101778163 do Sở Kế Hoạch Đầu Tư Thành Phố Hà
               Nội cấp vào ngày 28/07/2005. Giấy phép cung cấp Dịch vụ Phát
-              thanh, Truyền hình trên mạng Internet cấp lần đầu ngày 18/11/2016,
-              cấp lại theo Giấy phép số 99/GP-BTTTT ngày 27/03/2023.
+              thanh, Âm nhạc trên mạng Internet cấp lần đầu ngày 18/11/2016, cấp
+              lại theo Giấy phép số 99/GP-BTTTT ngày 27/03/2023.
             </p>
             <div class="operating-system">
               <i class="fa-brands fa-android" style="color: #ffffff"></i>
@@ -546,8 +559,6 @@
       </div>
     </div>
   </body>
-  <script src="/IT_Project/js/navbar.js"></script>
-  <script src="/IT_Project/js/navbar.js"></script>
   <script src="/IT_Project/js/home.js"></script>
-  <script src="/IT_Project/js/slider.js"></script>
+  <script src="/IT_Project/js/navbar.js"></script>
 </html>

@@ -41,13 +41,17 @@ async function checkUser() {
   let data = await getUserList();
   // console.log(data)
   let user = data.find(user => email == user.email && user.password === password)
-  currentUserId = user.id;
-  document.getElementById('userAccount').innerHTML=user.userAccount;
-  document.getElementById('account').innerHTML=user.userAccount;
-  document.getElementById('ID').innerHTML=user.identifyCode;
-  document.getElementById('email').innerHTML=user.email;
-  document.getElementById('area').innerHTML=user.city;
-  document.getElementById('password').innerHTML=user.password;
+
+  var list = user.watchedHistory
+  if (list.length == 0) {
+    document.getElementById('content_view_history').innerHTML = 'Lịch sử trống'
+    console.log('ksdhbfgsdfgdghsjhggh');
+  }
+  else {
+    list.forEach(function (element) {
+    
+    })
+  }
 }
 
 
@@ -85,7 +89,7 @@ function changeAccount() {
 //FUNCTION CHANGE EMAIL
 function changeEmail() {
   var nEmail = document.getElementById('nEmail').value;
-  if (nEmail === '') {
+  if (nEmail === '') { 
     alert('Vui lòng điền đầy đủ thông tin');
   }
   else{
