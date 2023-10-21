@@ -1,0 +1,121 @@
+:root{
+    --danger-text:rgba(230, 16, 16, 1);
+    --button: rgba(232, 38, 26, 1);
+    --notice-text: rgba(244, 92, 45, 1);
+    --selecting: rgb(221, 54, 3);
+    --instruction-div: rgba(243, 210, 93, 1);
+    --selection:rgba(48, 210, 45, 1);
+    --normal-text: rgba(255, 255, 255, 1);
+    --sub-heading: rgba(112, 182, 204, 1);
+    --couple-seat: rgba(40, 54, 103, 1);
+    --nav-color:rgba(91, 88, 88, 0.136);
+    --nav-text-color:rgb(75, 77, 78);
+    --instruction-text:rgba(32, 31, 28, 1);
+    --background-color: rgba(16, 16, 16, 1);
+}
+body{
+    background-color: black;
+}
+.nav{
+    background-color: var(--nav-color);
+    color: var(--normal-text);
+}
+.nav-item{
+    color: var(--normal-text);
+}
+.nav .nav-item p{
+    font-size: 10px;
+}
+.inforder{
+    background-color: var(--nav-color);
+    font-size: 12px;
+    color: var(--nav-text-color);
+}
+button{
+    color: var(--normal-text);
+    font-weight: 700;
+    background-color: var(--button);
+}
+.heading_table{
+    background-color:var(--nav-color);
+    color: var(--nav-text-color);
+    font-size: 14px;
+}
+.cinema_name{
+    color: var(--normal-text);
+    font-size: 14px;
+    font-weight: 600;
+}
+.logo_cinema{
+    width: 65px;
+    height: 40px;
+}
+.branch_cinema{
+    text-decoration: none;
+    color: rgb(237, 227, 227);
+}
+.pay_selection:hover {
+    background-color: #FFA500; /* Màu nền khi hover */
+}
+
+.pay_selection:hover .branch_cinema {
+    background-color: var(--button); /* Màu nền khi hover */
+    /* font-weight: 600;
+    color: var(--normal-text); */
+}
+/* .pay_selection:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+} */
+
+.branch{
+    list-style-type: none;
+}
+.thead_item{
+    font-size: 12px;
+    color: var(--normal-text);
+}
+.thead_heading{
+    background-color: var(--nav-color);
+}
+ul, li{
+    list-style-type: none;
+}
+.tbody_heading{
+    background-color: rgb(141, 144, 144);
+}
+.tbody_row{
+    background-color: rgb(180, 174, 174);
+}
+.t_item{
+    font-size: 12px;
+    color: var(--normal-text);
+}
+.remove_button:hover, .add_button:hover{
+    color: var(--button);
+}
+.tbody_row:last-child {
+  border-bottom-left-radius: 5px; 
+  border-bottom-right-radius: 5px; 
+}
+
+/* .cinema .branchs {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.cinema.active .branchs {
+    max-height: 1000px; 
+    animation: slideDown 3s; 
+}
+
+@keyframes slideDown {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 1000px;
+    }
+} */
+
