@@ -15,7 +15,9 @@
     <div class="container-fluid">
         <div class="row title my-2 pt-0 p-2">
             <div class="col-md-1 col-1 back text-start mt-2 pt-2">
-                <i class="bi bi-chevron-left" style="color: white;"></i>
+                <a href="/IT_Project/html/payTicket.html">
+                    <i class="bi bi-chevron-left" style="color: white;"></i>
+                </a>
             </div>
             <div class="col-md-11 col-11 text-center">
                 <img style="height: 40px" src="/IT_Project/img/Logo.png" alt="title-background">
@@ -23,15 +25,19 @@
         </div>
         <div class="row nav mt-0  gap-1 pt-2 ">
             <div class="col-md-2 col-2 nav-item p-0 text-center">
-                <i class="bi bi-grid "></i>
-                <p class="nav_text">Chọn ghế</p>
+                <a href="/IT_Project/html/Feature_seat_quyen.html" style="color: white; text-decoration: none;">
+                    <i class="bi bi-grid "></i>
+                    <p class="nav_text">Chọn ghế</p>
+                </a>
             </div>
             <div class="col-md-1 col-1 nav-item p-0 text-center">
                 <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
             </div>
             <div class="col-md-2 col-2 nav-item p-0 text-center">
-                <i class="bi bi-inboxes-fill"></i>
-                <p class="nav_text">Bắp nước</p>
+                <a href="/IT_Project/html/corn.html" style="color: white; text-decoration: none;">
+                    <i class="bi bi-inboxes-fill"></i>
+                    <p class="nav_text">Bắp nước</p>
+                </a>
             </div>
             <div class="col-md-1 col-1 nav-item p-0 text-center">
                 <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
@@ -73,8 +79,9 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row rounded-2 m-3 ">
-                        <button class=" rounded-2 border-0 p-1">Thanh toán</button>
+                    <div class="row rounded-2 m-3 gap-2">
+                        <button class=" rounded-2 border-0 p-1" onclick="paySeat()">Tiếp tục</button>
+                        <button class=" rounded-2 border-0 p-1" onclick="paySeat()">Thanh toán</button>
                     </div>
                 </div>
                 <div class="col-md-8 col-12 order-md-first">

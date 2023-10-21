@@ -36,10 +36,7 @@ async function checkUser() {
   let userInfo = JSON.parse(localStorage.getItem('userInfo'));
   let email = userInfo[0][1];
   let password = userInfo[0][0];
-  // console.log(email);
-  // console.log(password);
   let data = await getUserList();
-  // console.log(data)
   let user = data.find(user => email == user.email && user.password === password)
   currentUserId = user.id;
   document.getElementById('userAccount').innerHTML=user.userAccount;
