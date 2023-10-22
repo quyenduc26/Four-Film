@@ -1,11 +1,14 @@
 let apiCinema = 'https://65300e576c756603295e2eec.mockapi.io/Cinema';
 let apiMainStorage = 'https://65180651582f58d62d355368.mockapi.io/MainStorage';
 let apiItems = 'https://65300e576c756603295e2eec.mockapi.io/Items';
-let cornCost = 0;
 let currentUserId;
+let currentPrice;
+let currentItem = [];
+let currentQuantity = [];
 let itemIDList = [];
 let itemQuantityList = [];
 let itemPriceList = [];
+let change
 
 document.addEventListener('DOMContentLoaded', async () => {
   await renderItem();
@@ -27,14 +30,25 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (quantity > 0) {
         quantity -= 1;
         quantityElement.textContent = quantity;
+        currentPrice -= parseInt(item.price);
+        console.log(currentPrice)
+        document.getElementById('total_seat').innerHTML = currentPrice.toLocaleString('vi-VN',{
+          style: 'currency',
+          currency: 'VND'
+        });
       }
+
     });
 
     addButton.addEventListener('click', () => {
       quantity += 1;
       quantityElement.textContent = quantity;
-      
-      
+      currentPrice += parseInt(item.price);
+      console.log(currentPrice)
+      document.getElementById('total_seat').innerHTML = currentPrice.toLocaleString('vi-VN',{
+        style: 'currency',
+        currency: 'VND'
+      });;
     });
   });
 });
@@ -45,15 +59,14 @@ async function payCorn(){
   var items = await getItemList();
   Items.forEach((item)=>{
     var itemQuantity = parseInt(item.querySelector('.quantity').textContent);
+    var itemName = item.querySelector('.name_item').textContent;
+    var itemFound = items.find(data=> data.name === itemName);
+    var itemPrice = itemFound.price;
     if(itemQuantity > 0){
       //bản cũ
       // var itemName = item.querySelector('.name_item').textContent;
       // var itemPrice = parseInt(item.querySelector('.price_item').textContent);
       // cornCost += itemPrice*itemQuantity;
-
-      var itemName = item.querySelector('.name_item').textContent;
-      var itemFound = items.find(data=> data.name === itemName);
-      var itemPrice = itemFound.price;
       console.log(itemFound)
       itemIDList.push(itemFound.id);
       itemQuantityList.push(itemQuantity);
@@ -61,19 +74,20 @@ async function payCorn(){
       console.log(itemIDList);
       console.log(itemQuantityList);
       console.log(itemPriceList);
+    }else{
+        
     }
   })
-  alert(cornCost)
   let userInfo = JSON.parse(localStorage.getItem('userInfo'));
     let email = userInfo[0][1];
     let password = userInfo[0][0];
     let data = await getUserList();
     let user = data.find(user => email == user.email && user.password === password)
     currentUserId = user.id;
-    for (let i = 0; i < user.consumeList.length; i++) {
-      cornCost += parseInt(itemQuantityList[i]) * parseInt(itemPriceList[i]);
-      console.log(cornCost);
-    }
+    // for (let i = 0; i < user.consumeList.length; i++) {
+    //   cornCost += parseInt(itemQuantityList[i]) * parseInt(itemPriceList[i]);
+    //   console.log(cornCost);
+    // }
     
      
     console.log('Fetching URL:', apiMainStorage + '/' + currentUserId);
@@ -81,7 +95,7 @@ async function payCorn(){
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        currentPrice: cornCost,
+        currentPrice: currentPrice,
         quantityItem: itemQuantityList,
         consumeList: itemIDList
       })
@@ -89,6 +103,8 @@ async function payCorn(){
     ).then(user => {
       alert(user.currentPrice);
       alert(user.seatList);
+      alert(user.quantityItem);
+      alert(user.consumeList);
       document.getElementById('total_seat').innerHTML = user.currentPrice.toLocaleString('vi-VN',{
         style: 'currency',
         currency: 'VND'
@@ -127,6 +143,9 @@ async function checkUser() {
   let data = await getUserList();
   let user = data.find(user => email == user.email && user.password === password)
   currentUserId = user.id;
+  currentPrice = user.currentPrice;
+  currentItem = user.consumeList;
+  currentQuantity = user.quantityItem;
   document.getElementById('total_seat').innerHTML=user.currentPrice.toLocaleString('vi-VN',{
       style: 'currency',
       currency: 'VND'
@@ -136,16 +155,29 @@ async function checkUser() {
 
 async function renderItem(){
   await checkUser();
-  let data = await getItemList();
-  console.log(typeof data)
-  data.forEach((item)=>{
-    var html = `
+  let items = await getItemList();
+  items.forEach((item)=>{
+    if (currentItem.includes(item.id)) {
+      var id = currentItem.indexOf(item.id);
+      console.log(currentQuantity[id])
+      var html = `
+      <tr class="tbody_row row py-2 justify-content-between gap-0 gap-md-2">
+        <td class="t_item col-md-6 col-6 name_item">${item.name}</td>
+        <td class="t_item col-md-2 col-2 text-center price_item">${item.price}</td>
+        <td class="t_item col-md-3 col-3 d-inline-flex justify-content-end quantity_item"><span class="remove_button"><i class="bi bi-dash-circle px-2"></i></span><span class="quantity">${currentQuantity[id]}</span><span class="add_button"><i class="bi bi-plus-circle px-2"></i></span></td>
+      </tr>
+    `;
+      } else {
+        var html = `
         <tr class="tbody_row row py-2 justify-content-between gap-0 gap-md-2">
           <td class="t_item col-md-6 col-6 name_item">${item.name}</td>
           <td class="t_item col-md-2 col-2 text-center price_item">${item.price}</td>
           <td class="t_item col-md-3 col-3 d-inline-flex justify-content-end quantity_item"><span class="remove_button"><i class="bi bi-dash-circle px-2"></i></span><span class="quantity">0</span><span class="add_button"><i class="bi bi-plus-circle px-2"></i></span></td>
         </tr>
       `;
+      }
+      
+ 
 
     if (item.category === 'corn') {
       document.getElementById('corn').innerHTML += html;

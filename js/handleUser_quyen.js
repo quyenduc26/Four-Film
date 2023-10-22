@@ -38,7 +38,13 @@ async function checkUser() {
   let password = userInfo[0][0];
   let data = await getUserList();
   let user = data.find(user => email == user.email && user.password === password)
-
+  currentUserId = user.id;
+  document.getElementById('userAccount').innerHTML=user.userAccount;
+  document.getElementById('account').innerHTML=user.userAccount;
+  document.getElementById('ID').innerHTML=user.identifyCode;
+  document.getElementById('email').innerHTML=user.email;
+  document.getElementById('area').innerHTML=user.city;
+  document.getElementById('password').innerHTML=user.password;
   var list = user.watchedHistory
   if (list.length == 0) {
     document.getElementById('content_view_history').innerHTML = 'Lịch sử trống'
