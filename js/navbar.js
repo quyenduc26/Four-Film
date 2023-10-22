@@ -1,4 +1,5 @@
 //Navbar
+
 document.addEventListener('DOMContentLoaded',function(){
   const signupButton = document.getElementById("post")
   const singupMobile = document.getElementById('singupMobile')
@@ -22,8 +23,10 @@ document.addEventListener('DOMContentLoaded',function(){
   var home = document.getElementById('home')
   var next = document.getElementById('next')
     var accountListJSON = localStorage.getItem("accountList");
-    var accountList = accountListJSON ? JSON.parse(accountListJSON) : [];
-
+  var accountList = accountListJSON ? JSON.parse(accountListJSON) : [];
+  
+    
+  
   singupMobile.addEventListener('click', function() {
     signupModal.style.display = "block";
     menuMobile.classList.toggle("open");
@@ -109,8 +112,10 @@ document.addEventListener('DOMContentLoaded',function(){
               localStorage.setItem('userInfo', JSON.stringify(userInfo));
               userInfo.splice(0,0,a);
               localStorage.setItem('userInfo', JSON.stringify(userInfo));
+               var myVariable = true;
 
-
+              // Lưu giá trị cập nhật vào local storage
+              localStorage.setItem('myVariable', myVariable);
               const iconUser = `<a href="Feature_profile_quyen.html"><i class="fa-solid fa-user" id="iconUser"></i></a>`;
               document.getElementById('changeItem').innerHTML = iconUser;
               signupModal.style.display = 'none';
@@ -124,6 +129,7 @@ document.addEventListener('DOMContentLoaded',function(){
           });
       }
     });
+   
     
     document.getElementById('registerButton').addEventListener('click', function(event) {
       event.preventDefault();
@@ -192,15 +198,21 @@ document.addEventListener('DOMContentLoaded',function(){
             notificationModal.style.display = 'block';
             document.getElementById('notificationContent').innerHTML = 'Chúc mừng bạn đăng ký thành công!';
             registerModal.style.display = 'none';
-            const iconUser = `<a href="Feature_profile_quyen.html"><i class="fa-solid fa-user" id="iconUser"></i></a>`;
-            document.getElementById('changeItem').innerHTML = iconUser;
+            checkLogin()
           })
           .catch(error => {
             console.error('Error:', error);
           });
       }
     });
-    
+      checkLogin()
+    function checkLogin() {
+      var storedValue = localStorage.getItem('myVariable');
+      if (storedValue === 'true') {
+        const iconUser = `<a href="Feature_profile_quyen.html"><i class="fa-solid fa-user" id="iconUser"></i></a>`;
+        document.getElementById('changeItem').innerHTML = iconUser;
+      }
+    }
     function isValidEmail(email) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);

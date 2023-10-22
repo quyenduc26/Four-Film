@@ -48,7 +48,6 @@ async function checkUser() {
   var list = user.watchedHistory
   if (list.length == 0) {
     document.getElementById('content_view_history').innerHTML = 'Lịch sử trống'
-    console.log('ksdhbfgsdfgdghsjhggh');
   }
   else {
     list.forEach(function (element) {
@@ -178,6 +177,9 @@ function changePassword() {
 function logOut() {
   window.localStorage.clear(); 
   window.close.localStorage.clear();
+  myVariable = false;
+  // Lưu giá trị cập nhật vào local storage
+  localStorage.setItem('myVariable', myVariable);
 }
 
 
