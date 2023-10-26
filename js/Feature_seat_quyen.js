@@ -40,6 +40,7 @@ async function checkUser() {
 
 //CHECK AVAILABLE SEAT THEN SELECT
 document.addEventListener("DOMContentLoaded", ()=> {
+    document.getElementById('seat_section').style.color = 'var(--button)';
     var seats = document.querySelectorAll(".seat");                                                 // Lọc tất cả các ghế
     var seatInstance = seatList.join(' ');
     seats.forEach((seat) =>{ 

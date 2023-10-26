@@ -29,10 +29,69 @@ body{
 .inforder{
     background-color: var(--nav-color);
     font-size: 12px;
-    color: var(--nav-text-color);
+    color: var(--normal-text);
 }
 button{
     color: var(--normal-text);
     font-weight: 700;
     background-color: var(--button);
+}
+
+.container-fluid{
+    background-color: var(--background-color);
+}
+.heading_table{
+    background-color:var(--nav-color);
+    color: var(--nav-text-color);
+    font-size: 14px;
+}
+.warning_text{
+    font-size: 14px;
+    background-color: var(--nav-color);
+    color: var(--nav-text-color);
+}
+.pay_button{
+    background-color: var(--couple-seat);
+    color: var(--normal-text);
+}
+.payment_method{
+    background-color: var(--nav-color);
+    
+}
+.pay_app{
+    width: 35px;
+    height: 35px;
+}
+.pay_selection{
+    background-color: var(--normal-text);
+    color: var(--nav-text-color);
+    font-size: 13px;
+    
+}
+.checkbox_note{
+    font-size: 12px;
+}
+.vanh{
+    background-color: var(--normal-text);
+}
+.date{
+    font-size: 12px;
+}
+.guide{
+    background-color: var(--instruction-div);
+}
+.guide_text{
+    font-size: 12px;
+    color: var(--instruction-text);
+}
+.logo_cinema{
+    width: 65px;
+    height: 40px;
+}
+label{
+    font-size: 13px;
+}
+#fullname, #email, #phone_nb{
+    /* padding-left: 10px; */
+    font-size: 13px;
 }

@@ -1,4 +1,3 @@
-let apiCinema = 'https://65300e576c756603295e2eec.mockapi.io/Cinema';
 let apiMainStorage = 'https://65180651582f58d62d355368.mockapi.io/MainStorage';
 let apiItems = 'https://65300e576c756603295e2eec.mockapi.io/Items';
 let currentUserId;
@@ -8,9 +7,9 @@ let currentQuantity = [];
 let itemIDList = [];
 let itemQuantityList = [];
 let itemPriceList = [];
-let change
 
 document.addEventListener('DOMContentLoaded', async () => {
+  document.getElementById('corn_section').style.color = 'var(--button)';
   await renderItem();
   let items = await getItemList();
   var rows = document.querySelectorAll(".tbody_row");
@@ -23,15 +22,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     var item = items.find(item => item.name === nameItem)
     var itemID = item.id;
     var itemPrice = item.price;
-    console.log(itemID)
-    console.log(itemPrice)
+    // console.log(itemID)
+    // console.log(itemPrice)
 
     removeButton.addEventListener('click', () => {
       if (quantity > 0) {
         quantity -= 1;
         quantityElement.textContent = quantity;
         currentPrice -= parseInt(item.price);
-        console.log(currentPrice)
+        // console.log(currentPrice)
         document.getElementById('total_seat').innerHTML = currentPrice.toLocaleString('vi-VN',{
           style: 'currency',
           currency: 'VND'
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       quantity += 1;
       quantityElement.textContent = quantity;
       currentPrice += parseInt(item.price);
-      console.log(currentPrice)
+      // console.log(currentPrice)
       document.getElementById('total_seat').innerHTML = currentPrice.toLocaleString('vi-VN',{
         style: 'currency',
         currency: 'VND'
@@ -74,8 +73,6 @@ async function payCorn(){
       console.log(itemIDList);
       console.log(itemQuantityList);
       console.log(itemPriceList);
-    }else{
-        
     }
   })
   let userInfo = JSON.parse(localStorage.getItem('userInfo'));
@@ -109,7 +106,7 @@ async function payCorn(){
         style: 'currency',
         currency: 'VND'
       });
-      // window.location.href = "/IT_Project/html/corn.html";
+      window.location.href = "/IT_Project/html/payment.html";
     })
     .catch(error => {
       console.error('Error:', error);
@@ -145,7 +142,9 @@ async function checkUser() {
   currentUserId = user.id;
   currentPrice = user.currentPrice;
   currentItem = user.consumeList;
+  console.log(currentItem);
   currentQuantity = user.quantityItem;
+  console.log(currentQuantity);
   document.getElementById('total_seat').innerHTML=user.currentPrice.toLocaleString('vi-VN',{
       style: 'currency',
       currency: 'VND'
@@ -176,10 +175,7 @@ async function renderItem(){
         </tr>
       `;
       }
-      
- 
-
-    if (item.category === 'corn') {
+ if (item.category === 'corn') {
       document.getElementById('corn').innerHTML += html;
     } else if (item.category === 'combo') {
       document.getElementById('combo').innerHTML += html;

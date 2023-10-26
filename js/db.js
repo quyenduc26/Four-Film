@@ -1,236 +1,239 @@
-// var movies = [
-//     {
-//         id:'p1',
-//         src: "https://bizweb.dktcdn.net/100/330/208/files/hinh-nen-kimetsu-yaiba-ngau-6-1.jpg?v%5Cu003d1649906743187",
-//         alt: "Movie 1",
-//         title: "Thanh gương diệt quỷ",
-//         describe: "Thanh Gươm Diệt Quỷ - phần phim tại Phố Đèn Đỏ cuối cùng cũng đã kết thúc. Sau trận chiến khốc liệt, Tanjiro và Uzui đã thành công chặt đầu Gyutaro. Trong khi đó, Zenitsu và Inosuke hợp sức chặt đầu Daki cùng một lúc. Tuy nhiên, Gyutaro đã giải phóng Huyết thuật của mình và bao phủ khắp toàn bộ khu vực. Tanjiro tỉnh dậy và hội ngộ cùng Nezuko và Zenitsu, nhưng Inosuke và Uzui đang cận kề cái chết vì bị Gyutaro đầu độc.",
-//         episodes: "Tập 24",
-//         watchLink: "https://www.youtube.com/embed/Ypil56yin2M", // Liên kết xem phim 1
-//         category: 'anime',
-//         anotherName: "Kimetsu no YaibaLưỡi gươm diệt quỷDiệt quỷ cứu nhân",
-//         countryOfManufacture: "japan",
-//         yearOfRelease: '2019',
-//         type: "Phiêu lưu - mạo hiểm - kịch tính",
-//         author: 'Đặng vĂn Sinh',
-//         actor:"sinh-loan-anh-quyền"
-//       },
-//         {
-//         id:'p2',
-//         src: "https://riki.edu.vn/wp-content/uploads/2019/10/14775-768x1121.jpg",
-//         alt: "Movie 1",
-//         title: "Lá thư gửi Momo (A letter to Momo)",
-//         describe: "“Lá thư gửi Momo” được công chiếu và giới thiệu lần đầu tiên vào năm 2011. Khi vừa ra mắt, bộ phim này đã tạo nên một làn sóng mới với hiệu ứng người xem rất tốt và nhanh chóng đạt được nhiều giải thưởng. Bộ phim hội tụ đủ mọi yếu tố: hài hước, phiêu lưu, thần thoại. Vừa ý nghĩa vừa có tính nhân văn sâu sắc. Hãy xem để nhận ra cuộc sống đáng quý và cần được nâng niu ra sao. Xem để sống chậm lại, nghĩ khác đi và yêu thương nhiều hơn…",
-//         episodes: "Tập 1",
-//         watchLink: "https://www.youtube.com/embed/SA3j3ev8dqE", // Liên kết xem phim 1
-//         category: 'anime',
-//         countryOfManufacture: "japan",
-//         yearOfRelease: '2010',
-//         type: "Phiêu lưu",
-//         author: 'Đặng vĂn Sinh',
-//         actor:"sinh-loan-anh-quyền"
-//         },
-//         {
-        
-//         id:'p3',
-//         src: "https://th.bing.com/th/id/R.9082926e4c15ed8eb3d132d7b8d0d58b?rik=4djG0dLea0wG2A&pid=ImgRaw&r=0",
-//         alt: "Movie 1",
-//         title: "conan(Thám tử lừng danh)",
-//         describe: " Thám Tử Lừng Danh Conan được mua bản quyền và được cập nhật phát sóng mới nhất trên ứng dụng giải trí POPS. Đây là bộ phim hoạt hình chuyển thể từ truyện tranh hấp dẫn nhất: Thám Tử Lừng Danh Conan của tác giả Aoyama Gosho. Phim Conan kể về thần đồng 17 tuổi Shinichi Kudo - còn được biết đến với biệt danh “Cứu tinh của Sở Cảnh sát Nhật Bản” - người thường xuyên giúp lực lượng cảnh sát giải quyết các vụ án phức tạp.",
-//         episodes: "Tập 1",
-//         watchLink: "https://www.youtube.com/embed/CL_SiaJsm9Q", // Liên kết xem phim 1
-//         category: 'anime',
-//         countryOfManufacture: "japan",
-//         yearOfRelease: '2000',
-//         type: "Trinh thám",
-//         author: 'Đặng vĂn Sinh',
-//         actor:"sinh-loan-anh-quyền"
-//         },{
+var movies = [
+  {
+    "src": "https://i.ytimg.com/vi/AeZtcb7ltwo/maxresdefault.jpg",
+    "alt": "Movie 17",
+    "title": "Thương em - Châu Khải Phong",
+    "describe": "Thương em - Là ca khúc mà Châu Khải Phong sáng tác. Bài hát chứa đựng tâm tư và tình cảm gửi tới người con gái anh thương",
+    "episodes": "MV - Ca nhạc",
+    "watchLink": "https://www.youtube.com/embed/AeZtcb7ltwo",
+    "category": "âm nhạc",
+    "anotherName": "Châu Khải Phong",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2022",
+    "type": "Tình cảm",
+    "author": "Châu Khải Phong",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "17"
+  },
 
-//         id:'p4',
-//         src: "https://i.ytimg.com/vi/IkaP0KJWTsQ/maxresdefault.jpg",
-//         alt: "Movie 4",
-//         title: "Nhà bà nữ ",
-//         describe: "Nhà bà nữ  -Chuyện phim xoay quanh gia đình bà Nữ, chuyên bán bánh canh ở một khu chung cư cũ. Bà Nữ bị chồng bỏ, một mình nuôi hai cô con gái và mẹ già. Các mối quan hệ trong gia đình bà Nữ có thể coi là độc hại, với sự độc đoán, khắt khe và gay gắt của bà Nữ bao trùm lên mọi thành viên.",
-//         episodes: "Full tập",
-//         watchLink: "https://www.youtube.com/embed/IkaP0KJWTsQ", // Liên kết xem phim 4
-//         category: 'Phim bộ',
-//         anotherName: "Trấn Thành - Lê Giang - Song Luân",
-//         countryOfManufacture: "Viet Nam",
-//         yearOfRelease: '2023',
-//         type: "Điện ảnh - gia đình",
-//         author: 'Trấn Thành',
-//         actor:"sinh-loan-anh-quyền"
-//       },
-      
-//       {
+{
+    "src": "https://35express.org/wp-content/uploads/2020/09/loi-bai-hat-hoa-hai-duong-1-1200x900.jpg",
+    "alt": "Movie 18",
+    "title": "Hoa hải đường",
+    "describe": "Hoa hải đường - sáng tác bởi nhạc sĩ Jack và được thể hiện bởi ca sĩ Jack. Cùng thưởng thức bài hát này để cảm nhận những giai điệu thú vị, và những câu từ ý nghĩa mà tác giả cũng như ca sĩ muốn truyền tải nhé ",
+    "episodes": "MV - Ca nhạc",
+    "watchLink": "https://www.youtube.com/embed/Bhg-Gw953b0",
+    "category": "âm nhạc",
+    "anotherName": "Jack",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2020",
+    "type": "Tình cảm",
+    "author": "Jack",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "18"
+  }
 
-//         id:'p5',
-//         src: "https://i.ytimg.com/vi/Ku0ay2SpGgk/maxresdefault.jpg",
-//         alt: "Movie 5",
-//         title: "Siêu nhân Gao và siêu nhân Cuồng Phong ",
-//         describe: "Siêu nhân Gao và siêu nhân Cuồng Phong -Em trai Chuzubo tên là Chubozu-một trọng bảy khẩu súng bóng tối đã bắt cóc và lấy được điện thoại siêu nhân của siêu nhân Gaoranger nhờ sự giúp sức của Tsue Tsue và Jabaiba -tàn quân của Orugu. Gaoranger bị yểm bùa và bị trói trong một hang động.Họ cố gắng giải thoát Gao Trắng và để cô đi tìm Hurricanger cầu viện. Bất ngờ là bảy khẩu súng bóng tối của Jakanja lại biến hình thành các Gaoranger giả tấn công Hurricanger. Gao Trắng xuất hiện và giải thích mọi chuyện khi mà Gao Vua đánh bại Oanh Lôi Thần và Tuyền Phong Thần. Hurricaneger đi cứu Gaoranger. Ikkou và Isshu cùng Thủ Lý Kiếm Giả cản bọn Jakanja còn nhóm Yousuke đi theo Gao Trắng. Koutan và Yousuke hóa giải lá bùa Chubozu phong ấn, các Gaoranger thoát ra và chiến đấu. Nhưng mọi chuyện chỉ được giải quyết khi Gao Bạc theo tiếng gọi của ngọn gió xuất hiện.",
-//         episodes: "Tập đặc biệt",
-//         watchLink: "https://www.youtube.com/embed/Ku0ay2SpGgk", // Liên kết xem phim 4
-//         category: 'anime',
-//         anotherName: "Shishi Kakeru,Washio Gaku",
-//         countryOfManufacture: "Nhật Bản",
-//         yearOfRelease: '2017',
-//         type: "tokusasku",
-//         author: 'Ishiro Honda',
-//         actor:"sinh-loan-anh-quyền"
-//     },
-//       {
 
-//       id:'p6',
-//       src: "https://i.ytimg.com/vi/MNm77lvTfi4/maxresdefault.jpg",
-//       alt: "Movie 6",
-//       title: "Mắc biếc",
-//       describe: "Mắc biếc  -  Mắt biếc xoay quanh mối tình đơn phương của Ngạn với Hà Lan, cô bạn gái có cặp mắt hút hồn nhưng cá tính bướng bỉnh. Một chuyện tình nhiều cung bậc, từ ngộ nghĩnh trẻ con, rồi tình yêu thuở học trò trong sáng, trải qua bao biến cố, trở thành một cuộc đuổi hình bắt bóng buồn da diết nhưng không nguôi hi vọng. Câu chuyện càng trở nên éo le hơn khi Trà Long - con gái của Hà Lan lớn lên lại nhen nhóm một tình yêu như thế với Ngạn.",
-//       episodes: "Trailler",
-//       watchLink: "https://www.youtube.com/embed/ITlQ0oU7tDA", // Liên kết xem phim 6
-//       category: 'Phim bộ',
-//       anotherName: "Trần Nghĩa,Trúc Anh",
-//       countryOfManufacture: "Việt Nam",
-//       yearOfRelease: '2019',
-//       type: "Tình cảm",
-//       author: 'Nguyễn Nhật Ánh',
-//       actor:"Victor Vũ"
-//     },
-//     {
+,
 
-//       id:'p7',
-//       src: "https://i.ytimg.com/vi/Nc70Bm_fMY8/maxresdefault.jpg",
-//       alt: "Movie 7",
-//       title: "LaLa School",
-//       describe: "LaLa School - Những màn trình diễn đặc sắc , quán quân La La Idol đã xuất hiện và toàn bộ bí mật về Tuệ Nghi cũng đã phơi bày trong tập cuối này. ",
-//       episodes: "Tập cuối",
-//       watchLink: "https://www.youtube.com/embed/Nc70Bm_fMY8", // Liên kết xem phim 7
-//       category: 'Phim bộ',
-//       anotherName: "Lê Chị, Nhi Kati, Khánh Vũ",
-//       countryOfManufacture: "Việt Nam",
-//       yearOfRelease: '2017',
-//       type: "Học đường, tình cảm",
-//       author: 'sinh-loan-anh-quyềnt',
-//       actor:"sinh-loan-anh-quyền"
-//     },
-//     {
 
-//       id:'p8',
-//       src: "https://i.ytimg.com/vi/sabo5rjm1-Y/maxresdefault.jpg",
-//       alt: "Movie 8",
-//       title: "Thần điêu đại hiệp",
-//       describe:"Thần điêu đại hiệp - Nội dung chính của phim xoay quanh câu chuyện tình yêu của hai nhân vật chính là Dương Quá và Tiểu Long Nữ giữa những cuộc chiến tang thương đẫm máu cả trên giang hồ lẫn chiến trường. .",
-//       episodes: "Tập 1",
-//       watchLink: "https://www.youtube.com/embed/sabo5rjm1-Y", // Liên kết xem phim 8
-//       category: 'Phim bộ',
-//       anotherName: "Huỳnh Hiểu Minh, Lưu Diệc Phi",
-//       countryOfManufacture: "Trung Quốc",
-//       yearOfRelease: '2006',
-//       type: "Võ hiệp",
-//       author: 'Kim Dung',
-//       actor:"Vu Mẫn"
-//         },
-//     { 
-//         id:'p9', 
-//         src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv_l4_R55fgiFSx8T0TrqjTjSfkZxrzSWZcQ&usqp=CAU ", 
-//         alt: "Movie 9", 
-//         title: "Vết sẹo", 
-//         describe: " Thám tử lừng danh Conan xoay quanh câu chuyện về chàng thám tử Kudo Shinichi, trong một lần đang điều tra đã bị Tổ chức Áo Đen ép uống thuốc độc, khiến cho cơ thể bị teo nhỏ. Sau đó, Shinichi chuyển đến sống ở nhà của người bạn thuở niên thiếu Ran Mori cùng người bố Kogoro Mori. Tại đây, cậu dùng văn phòng thám tử của ông Kogoro để truy tìm tung tích của tổ chức Áo Đen đồng thời giúp ông phá nhiều vụ án dưới một thân phận mới là Conan Edogawa. ",
-//         episodes: "Tập 24",
-//         watchLink: "https://youtu.be/mB6fA148HV0?si=CKmhIgWztD1rD-AJ", // Liên kết xem phim 9 
-//         category: 'anime',
-//         anotherName: "Kudo Shinichi ",
-//         countryOfManufacture: "japan",
-//         yearOfRelease: '2019',
-//         type: "Phiêu lưu - mạo hiểm - kịch tính",
-//         author: "Gosho Aoyama", 
-//         actor: "sinh-loan-anh-quyền" ,
-//     },
-//     {
-//         display: false,
-//         id:'p10',
-//         src:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyhQ0gDlp6FuTB23Ib9HfYBVqODykeJllocA&usqp=CAU ",
-//         alt: "Movie 10",
-//         title: "Những nàng công chúa tài năng",
-//         describe: " Thám tử lừng danh Conan xoay quanh câu chuyện về chàng thám tử Kudo Shinichi, trong một lần đang điều tra đã bị Tổ chức Áo Đen ép uống thuốc độc, khiến cho cơ thể bị teo nhỏ. Sau đó, Shinichi chuyển đến sống ở nhà của người bạn thuở niên thiếu Ran Mori cùng người bố Kogoro Mori. Tại đây, cậu dùng văn phòng thám tử của ông Kogoro để truy tìm tung tích của tổ chức Áo Đen đồng thời giúp ông phá nhiều vụ án dưới một thân phận mới là Conan Edogawa.  ",
-//         episodes: "Full tập",
-//         watchLink: " https://youtu.be/LFME4PqCink?si=k-BUURqOzKyvvY5n", // Liên kết xem phim 10
-//         category: 'anime',
-//         anotherName: " Kudo Shinichi ",
-//         countryOfManufacture: "japan",
-//         yearOfRelease: '2019',
-//         type: "Phiêu lưu - mạo hiểm - kịch tính",
-//         author: "Gosho Aoyama",
-//         actor:"sinh-loan-anh-quyền",
-//     },
-//     {
 
-//         id:'p11',
-//         src:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ3VOe3j8AFNl9PKAhScnGYO91Xm7ZP9O_axlIP6xtFneiE4q6T8a6JVhZ4w7si5p605M&usqp=CAU ",
-//         alt: "Movie 11",
-//         title: "Yêu con người là điều cấm kỵ của ma cà rồng",
-//         describe: " Chạng Vạng - Twilight - Hừng Đông - bộ phim kể về một cô gái vừa chuyển nhà đến học ở một ngôi trường mới.Nơi đây tất cả nam sinh đều ngã ngục trước sắc đẹp của cô.Trong đó cô lại để ý đến anh chàng có vẻ ngoài lạnh lùng và nước da trắng bệch.Thật ra anh chàng đó là một con ma cà rồng anh ta cũng rất thích cô gái kia nhưng vì thân phận đặc biệt của mình nên anh tỏ ra né tránh.Còn cô gái thì ngày càng cố tìm hiểu về anh cho đến khi biết được thân phận thật sự của anh ta thì rất bất ngờ và mọi sự nguy hiểm đang rình rập cô ta mọi lúc. Chạng Vạng - Twilight là ấn phẩm hay nhất mọi thời đại được mọi người hết lời khen ngợi.Mọi người không nên bỏ qua bộ phim này.", 
-//         episodes: "Tập 24",
-//         watchLink: " https://www.youtube.com/embed/qvpFjBCKs8I", // Liên kết xem phim 11
-//         category: 'action',
-//         anotherName: "ma cà rồng ", 
-//         countryOfManufacture: "Mỹ",
-//         yearOfRelease: '2019',
-//         type: "Phiêu lưu - mạo hiểm - kịch tính",
-//         author: 'Trương Thế Hoài', 
-//         actor: "sinh-loan-anh-quyền"
-//     },
-//     {
-//         display: false,
-//         id:'p12',
-//         src:" https://i.ytimg.com/vi/wtJAZvcaIAc/hqdefault.jpg ",
-//         alt: "Movie 12",
-//         title: "Cậu bé triệu hồi ác quỷ từ địa ngục về để trả thù đám bắt nạt",
-//         describe: " The Terror of Hallow's Eve là bộ phim kinh dị chiếu rạp vào dịp lễ Halloween cách đây 6 năm trước. Theo chân Timmy, một cậu bé thích những mẫu chuyện kinh dị cùng những trò đùa tinh quái. Vào 1 hôm Timmy bị đám bắt nạt trong thị trấn đánh đập, cậu bé trong lúc tức giận, đã vô tình triệu hồi 1 con quỷ đáng sợ từ địa ngục, nhằm giúp mình trả thù những kẻ bắt nạt...",
-//         episodes: "full tập",
-//         watchLink: "https://www.youtube.com/embed/wtJAZvcaIAc”,// Liên kết xem phim 12",
-//         category: 'action',
-//         anotherName: "Đêm Halloween kinh hoàng: ",
-//         countryOfManufacture: "Mỹ",
-//         yearOfRelease: '2019',
-//         type: " mạo hiểm ",
-//         author: 'OkiTo Saha',
-//         actor:"sinh-loan-anh-quyền"
-//     },
-//     {
-//         id:'p13', 
-//         src:" https://cdn.tuoitre.vn/thumb_w/640/2022/12/1/wednesday-166986593470149771730.jpg ", 
-//         alt: "Movie 2",
-//         title: "Wednesday", 
-//         describe:"School Tales The Series là bộ phim kinh dị dài 8 tập của Thái, được ra mắt trên nền tảng Netflix. Mỗi tập phim sẽ là 1 câu chuyện kinh dị khác nhau, nhưng đều có điểm chung là sẽ khiến bạn sởn gai óc khi xem..",
-//         episodes: "Tập 24", 
-//         watchLink: "https://www.youtube.com/embed/wJQBaDSbZPE", // Liên kết xem phim 13
-//         category: 'action', 
-//         anotherName: "Wednesday: ", 
-//         countryOfManufacture: "Mỹ",
-//         yearOfRelease: '2019',
-//         type: "Phiêu lưu - mạo hiểm ", 
-//         author: 'Miyuki',
-//         actor: "sinh-loan-anh-quyền"
-//     },
-//     {
-//         display: false,
-//         id:'p14',
-//         src:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVrgztoU1lkR9eF3gYp_RrM0DAVtiUOhS7w&usqp=CAU ", 
-//         alt: "Movie 2", 
-//         title: "Bạn trai tôi là Hồ Ly(Phần 2) ",
-//         describe:" Trong phim nếu xem qua có thể thấy anh ấy là một quái vật rắn trong hình dạng con người, kẻ thù của Lee Yeon. Nhiều thế kỷ trước, anh ta được sinh ra trong một hang động nơi mọi người đang chết vì bệnh dịch. Anh ta lấy xác của Vua, cha của Ah-eum, làm vật chủ. Để cứu cha mình, Ah-eum đã cho phép Imoogi trú ngụ trong cơ thể cô để anh gặp Yeon. Anh ta đã bị giết bởi Yeon khi ở trong Ah-eum",
-//         episodes: "Tập 24", 
-//         watchLink: "https://www.youtube.com/embed/99SVEpFJ2Eo", // Liên kết xem phim 14
-//         category: 'action ',
-//         anotherName: "Bạn trai tôi là Hồ ly ", 
-//         countryOfManufacture: "Hàn Quốc",
-//         yearOfRelease: '2019', 
-//         type: " kịch tính",
-//         author: 'Phan Quân',
-//         actor:"sinh-loan-anh-quyền" }
-// ]
+
+{
+    "src": "https://i.ytimg.com/vi/QGlV1sxhEFQ/maxresdefault.jpg",
+    "alt": "Movie 19",
+    "title": "Em sẽ báo công an",
+    "describe": "Em sẽ báo công an - sau khi tạm biệt \"chàng trai sơ mi hồng\" đi du học đầy nuối tiếc, cô gái do Hồng Duyên đóng tiếp tục say nắng một \"chàng trai sơ mi hồng\" khác (Hoàng Trung đóng). Cô cùng nhóm bạn liên tục bày mưu kế tiếp cận chàng trai, vừa theo đuổi vừa ôm nhiều mơ mộng ",
+    "episodes": "MV - Ca nhạc",
+    "watchLink": "https://www.youtube.com/embed/QGlV1sxhEFQ",
+    "category": "âm nhạc",
+    "anotherName": "Hoàng Duyên - Kim Tuyền",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2022",
+    "type": "Tình cảm",
+    "author": "Hoàng Duyên - Kim Tuyền",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "19"
+  },
+
+{
+    "src": "https://i.ytimg.com/vi/5afz2COusA0/maxresdefault.jpg",
+    "alt": "Movie 20",
+    "title": "Gặp nhưng không ở lại",
+    "describe": "Lời bài hát Gặp Nhưng Không Ở Lại do nhạc sĩ trẻ Vương Anh Tú sáng tác đồng thời đây cũng là ca khúc được ca sĩ Hiền Hồ thể hiện thành công, MV Gặp Nhưng Không Ở Lại hiện đang đứng top 1 trending Youtube chỉ sau vài ngày phát hành",
+    "episodes": "MV - Ca nhạc",
+    "watchLink": "https://www.youtube.com/embed/5afz2COusA0",
+    "category": "âm nhạc",
+    "anotherName": "Hiền Hồ",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2022",
+    "type": "Tình cảm",
+    "author": "Vương Anh Tú",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "20"
+  }
+,
+
+
+
+
+
+{
+    "src": "https://i.ytimg.com/vi/6eONmnFB9sw/maxresdefault.jpg",
+    "alt": "Movie 21",
+    "title": "Chuyện đôi ta",
+    "describe": "Chuyện Đôi Ta là một trong những ca khúc có số lượng streaming ấn tượng nhất trong năm 2022 của Vpop. Đây là sản phẩm solo của thành viên Da LAB - Emcee L. Kết hợp với anh trong sản phẩm âm nhạc này là Muộii",
+    "episodes": "MV - Ca nhạc",
+    "watchLink": "https://www.youtube.com/embed/6eONmnFB9sw",
+    "category": "âm nhạc",
+    "anotherName": "Da LAB - Emcee L",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2022",
+    "type": "Tình cảm",
+    "author": "Da LAB - Emcee L",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "21"
+  },
+
+
+
+{
+    "src": "https://i.ytimg.com/vi/rvlaricweso/maxresdefault.jpg",
+    "alt": "Movie 22",
+    "title": "Sao cha không",
+    "describe": "Nhạc phẩm hiện đứng thứ 11 trong top trending (thịnh hành) của Youtube. Trong MV, Phan Mạnh Quỳnh vừa đàn piano vừa hát, xen lẫn những phân cảnh trong phim như: ông Ba Sang mưu sinh kiếm tiền nuôi con, đoạn đối đáp giữa ông và con trai khi gặp mâu thuẫn",
+    "episodes": "MV - Ca nhạc",
+    "watchLink": "https://www.youtube.com/embed/rvlaricweso",
+    "category": "âm nhạc",
+    "anotherName": "Phan Mạnh Quỳnh",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2021",
+    "type": "Tình cảm",
+    "author": "Trấn Thành",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "22"
+  }
+,
+
+
+
+
+{
+    "src": "https://i.ytimg.com/vi/fIq1FiZN_4k/maxresdefault.jpg",
+    "alt": "Movie 23",
+    "title": "Cuộc gọi nhỡ",
+    "describe": "Vương Anh Tú được khán giả biết đến là một ca sĩ, nhạc sĩ tài năng của nền âm nhạc Việt, anh là một người đã sáng tác ra rất nhiều bản nhạc hit như: Có tất cả nhưng thiếu anh, anh cứ đi đí,..Mới đây anh cũng đã cho ra mắt ca khúc Cuộc gọi nhỡ do chính anh sáng tác và thể hiện.",
+    "episodes": "MV - Ca nhạc",
+    "watchLink": "https://www.youtube.com/embed/fIq1FiZN_4k",
+    "category": "âm nhạc",
+    "anotherName": "Vương Anh Tú",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2022",
+    "type": "Tình cảm",
+    "author": "Vương Anh Tú",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "23"
+  }
+,
+
+
+
+
+{
+    "src": "https://i.ytimg.com/vi/kNwWuawMm3o/maxresdefault.jpg",
+    "alt": "Movie 24",
+    "title": "U23 Viêt Nam - U23 Indonesia",
+    "describe": "U23 Viêt Nam - U23 Indonesia. Trận đấu vô cùng gây cấn và hấp dẫn, cùng đón chờ xem nhé",
+    "episodes": "Thể thao",
+    "watchLink": "https://www.youtube.com/embed/kNwWuawMm3o",
+    "category": "thể thao",
+    "anotherName": "Việt Nam",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2022",
+    "type": "Thể thao",
+    "author": "Việt Nam",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "24"
+  }
+,
+
+
+{
+    "src": "https://i.ytimg.com/vi/PNSJU3mg9_w/maxresdefault.jpg",
+    "alt": "Movie 25",
+    "title": "Sea Game 31",
+    "describe": "Cận cảnh trao huy chương cho game 31 vô cùng gây cấn và hấp dẫn, cùng đón chờ xem nhé",
+    "episodes": "Thể thao",
+    "watchLink": "https://www.youtube.com/embed/PNSJU3mg9_w",
+    "category": "thể thao",
+    "anotherName": "Việt Nam",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2022",
+    "type": "Thể thao",
+    "author": "Việt Nam",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "25"
+  }
+
+
+
+
+
+,
+
+
+
+{
+    "src": "https://i.ytimg.com/vi/IxPdNouPz5I/maxresdefault.jpg",
+    "alt": "Movie 26",
+    "title": "U23 Việt Nam - U20 Hàn Quốc",
+    "describe": "Trận đấu U23 Việt Nam và U20 Hàn Quốc vô cùng gây cấn và hấp dẫn, cùng đón chờ xem nhé",
+    "episodes": "Thể thao",
+    "watchLink": "https://www.youtube.com/embed/IxPdNouPz5I",
+    "category": "thể thao",
+    "anotherName": "Việt Nam",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2022",
+    "type": "Thể thao",
+    "author": "Việt Nam",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "26"
+  }
+,
+
+{
+    "src": "",
+    "alt": "Movie 27",
+    "title": "Sea Game 31",
+    "describe": "Cận cảnh trao huy chương cho game 31 vô cùng gây cấn và hấp dẫn, cùng đón chờ xem nhé",
+    "episodes": "Thể thao",
+    "watchLink": "https://www.youtube.com/embed/PNSJU3mg9_w",
+    "category": "thể thao",
+    "anotherName": "Việt Nam",
+    "countryOfManufacture": "Việt Nam",
+    "yearOfRelease": "2022",
+    "type": "Thể thao",
+    "author": "Việt Nam",
+    "actor": "sinh-loan-anh-quyền",
+    "display": false,
+    "id": "27"
+  }
+
+
+
+
+
+]
 
 
 let apiMovies = 'https://65180651582f58d62d355368.mockapi.io/Movies';
@@ -318,7 +321,7 @@ async function modifyData(data,api){
 // RUNNING FUNCTIONS
 start(apiMainStorage)
 start(apiMovies)
-
+postData(movies,apiMovies)
 
 
 
