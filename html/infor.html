@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/IT_Project/bootstrap-5.3.1-dist/bootstrap.min.css">
+    <script src="/IT_Project/bootstrap-5.3.1-dist/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/IT_Project/css/infor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="/IT_Project/js/infor.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('WQQMlLQgV0QTbHzZX')</script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row title my-2 pt-0 p-2">
+            <div class="col-md-1 col-1 back text-start mt-2 pt-2">
+                <a href="/IT_Project/html/corn.html">
+                    <i class="bi bi-chevron-left" style="color: white;"></i>
+                </a>
+            </div>
+            <div class="col-md-11 col-11 text-center">
+                <img style="height: 40px" src="/IT_Project/img/Logo.png" alt="title-background">
+            </div>
+        </div>
+        <div class="row nav mt-0  gap-1 pt-2 ">
+            <div class="col-md-2 col-2 nav-item p-0 text-center">
+                <a href="/IT_Project/html/Feature_seat_quyen.html" style="color: white; text-decoration: none;">
+                    <i class="bi bi-grid "></i>
+                    <p class="nav_text">Chọn ghế</p>
+                </a>
+            </div>
+            <div class="col-md-1 col-1 nav-item p-0 text-center">
+                <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
+            </div>
+            <div class="col-md-2 col-2 nav-item p-0 text-center">
+                <a href="/IT_Project/html/corn.html" style="color: white; text-decoration: none;">
+                    <i class="bi bi-inboxes-fill"></i>
+                    <p class="nav_text">Bắp nước</p>
+                </a>
+            </div>
+            <div class="col-md-1 col-1 nav-item p-0 text-center">
+                <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
+            </div>
+            <div class="col-md-2 col-2 nav-item p-0 text-center">
+                <a href="/IT_Project/html/payment.html"  id="payment_section" style="color: white; text-decoration: none;">
+                    <i class="bi bi-inboxes-fill"></i>
+                    <p class="nav_text">Thanh toán</p>
+                </a>
+            </div>
+            <div class="col-md-1 col-1  nav-item p-0 text-center">
+                <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
+            </div>
+            <div class="col-md-2 col-2 nav-item p-0 text-center">
+                <a href="/IT_Project/html/infor.html" id="infor_section" style="color: white; text-decoration: none;">
+                    <i class="bi bi-receipt-cutoff"></i>
+                    <p class="nav_text">Thanh toán</p>
+                </a>
+            </div> 
+        </div>
+        <div class="infor row justify-content-center py-4 mx-1">
+            <div class=" details col-md-5 rounded-start-1">
+                <p class="text-center mt-2 mb-3" style="font-weight: bold; color: var(--normal-text);">THÔNG TIN GIAO DỊCH</p>
+                <p class="movie_name">TÊN PHIM : <span id="movie_name"></span></p>
+                <p class="seats">GHẾ : <span id="seats"></span></p>
+                <p class="corn">BẮP NƯỚC : <span id="corn"></span></p>
+                <p class="price">TỔNG ĐƠN : <span id="price"></span></p>
+                <p class="pay_method">THANH TOÁN : <span id="paymt"></span></p>
+                <p style="font-weight: 100; color: var(--normal-text); opacity: 0.4;")"><i>* Vui lòng quét mã QR để thanh toán</i></p>
+
+            </div>
+            <div class="line col-md-1 col-1" style="color: white;"></div>
+            <div class=" qr_code col-md-5 rounded-end-1">
+                <p class="text-center mt-2 mb-3" style="font-weight: bold; color: var(--normal-text);">QR CODE</p>
+                <div class="code d-flex justify-content-center mb-4">
+                    <img class="text-center" style="width: 200px;" src="/IT_Project/img/image 10 (1).png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="finish d-flex justify-content-center">
+            <button class="button text-center" style="font-weight: 700;" onclick="getOrder()">Hoàn tất</button>
+        </div>
+                
+        
+
+    </div>
+    
+</body>
+</html>

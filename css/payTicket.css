@@ -116,24 +116,6 @@ html{
 .branch{
     list-style-type: none;
 }
-.cinema .branchs {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-}
 
-.cinema.active .branchs {
-    max-height: 1000px; /* Đặt một giá trị lớn để nó có thể mở ra bất kể kích thước nội dung */
-    animation: slideDown 3s; /* Áp dụng animation với thời gian là 2 giây */
-}
-
-@keyframes slideDown {
-    0% {
-        max-height: 0;
-    }
-    100% {
-        max-height: 1000px;
-    }
-}
 
 
