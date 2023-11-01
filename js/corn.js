@@ -7,6 +7,8 @@ let currentQuantity = [];
 let itemIDList = [];
 let itemQuantityList = [];
 let itemPriceList = [];
+let movie_name = 'Avatar 2: The Way of Water';
+
 
 document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('corn_section').style.color = 'var(--button)';
@@ -47,8 +49,32 @@ document.addEventListener('DOMContentLoaded', async () => {
       document.getElementById('total_seat').innerHTML = currentPrice.toLocaleString('vi-VN',{
         style: 'currency',
         currency: 'VND'
-      });;
+      });
     });
+
+    const countdownElement = document.getElementById('time_remaining');
+    let remainingSeconds = 5 * 60; // Số giây còn lại (10 phút)
+
+    function updateCountdown() {
+        const minutes = Math.floor(remainingSeconds / 60);
+        const seconds = remainingSeconds % 60;
+
+        const minutesDisplay = minutes < 10 ? `0${minutes}` : minutes;
+        const secondsDisplay = seconds < 10 ? `0${seconds}` : seconds;
+
+        countdownElement.textContent = `${minutesDisplay}:${secondsDisplay}`;
+
+        if (remainingSeconds > 0) {
+            remainingSeconds--;
+        } else {
+            clearInterval(timer); // Dừng đồng hồ sau khi đã đếm ngược xong
+            countdownElement.textContent = "00:00"; 
+            alert('Đã hết thời gian giữ ghế. Vui lòng đặt lại');
+            window.location.href = "/IT_Project/html/payTicket.html";
+        }
+    }
+    // Cập nhật đồng hồ mỗi giây
+    const timer = setInterval(updateCountdown, 1000);
   });
 });
 
@@ -135,6 +161,7 @@ async function getUserList() {
   }
 async function checkUser() {
   let userInfo = JSON.parse(localStorage.getItem('userInfo'));
+  let cinema = JSON.parse(localStorage.getItem('cinema'));
   let email = userInfo[0][1];
   let password = userInfo[0][0];
   let data = await getUserList();
@@ -145,6 +172,8 @@ async function checkUser() {
   console.log(currentItem);
   currentQuantity = user.quantityItem;
   console.log(currentQuantity);
+  document.getElementById('film_name').innerHTML=movie_name;
+  document.getElementById('cinema_name').innerHTML=cinema;
   document.getElementById('total_seat').innerHTML=user.currentPrice.toLocaleString('vi-VN',{
       style: 'currency',
       currency: 'VND'

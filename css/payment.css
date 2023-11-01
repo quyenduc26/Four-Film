@@ -95,3 +95,7 @@ label{
     /* padding-left: 10px; */
     font-size: 13px;
 }
+.selected {
+    background-color: #15ee0a; /* Màu nền được chọn */
+    color: #fff; /* Màu chữ được chọn */
+}
