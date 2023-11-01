@@ -103,7 +103,7 @@ fetch(apiURL)
       </div> `
       document.getElementById('sport').innerHTML += movieMemory
       }
-      else if (movie.category === 'phim chiếu rạp') {
+      else if (movie.category === 'Phim chiếu rạp') {
         var movieMemory = `
         <div class="card" style="width: 12rem; height: 20rem; background-color:black;margin-right: 10px;" data-id="${movie.id}">
         <img id="watching" src="${movie.src}" class="card-img-top" alt="..." style="height: 15rem;object-fit: cover;">

@@ -5,7 +5,7 @@ let datas = [];
 fetch(apiURL)
     .then(response => response.json())
     .then(data => {
-        const foundAnime = data.filter(movie => 'phim chiếu rạp' === movie.category);
+        const foundAnime = data.filter(movie => 'Phim chiếu rạp' === movie.category);
         foundAnime.forEach(function (movie, index) {
             var indicatorButton = document.createElement("button");
             indicatorButton.category = "button";
@@ -98,7 +98,8 @@ fetch(apiURL)
             
             // Bước 2: Lấy ID của card
           var cardId = this.getAttribute('data-id');
-          window.location.href = `Feature_seat_quyen.html?id=${cardId}`
+          localStorage.setItem("idCard",cardId)
+          window.location.href = `payTicket.html?id=${cardId}`
             // Bước 3: Chuyển hướng đến trang chi tiết
             var detailPageUrl = "https://65180651582f58d62d355368.mockapi.io/Movies/" + cardId;
            

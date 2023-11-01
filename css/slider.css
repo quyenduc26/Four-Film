@@ -76,6 +76,11 @@
   border-radius: 10px;
   text-align: center;
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(18% - 10px);
+}
 .slider-item:nth-child(1) {
   background-color: #fd6c6c;
 }
