@@ -82,3 +82,6 @@ img{
 .nav_item:hover {
     background-color: var(--nav-color);
 }
+.transaction{
+    color: var(--normal-text);
+}

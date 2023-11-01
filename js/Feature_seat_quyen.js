@@ -1,14 +1,15 @@
 let apiCinema = 'https://65300e576c756603295e2eec.mockapi.io/Cinema';
 let apiMainStorage = 'https://65180651582f58d62d355368.mockapi.io/MainStorage';
+let movie_name = 'Avatar 2: The Way of Water';
 let currentUserId;
 var seatCost = 0;
 var seatList = [];
 
 
 //CHECK STAUS OF THE USER
-async function getUserList() {
+async function getList(api) {
   try {
-    const response = await fetch(apiMainStorage);
+    const response = await fetch(api);
     const data = await response.json();
     return data; // Trả về dữ liệu từ API
   } catch (error) {
@@ -17,13 +18,16 @@ async function getUserList() {
 }
 async function checkUser() {
   let userInfo = JSON.parse(localStorage.getItem('userInfo'));
+  let cinema = JSON.parse(localStorage.getItem('cinema'));
   let email = userInfo[0][1];
   let password = userInfo[0][0];
-  let data = await getUserList();
-  let user = data.find(user => email == user.email && user.password === password)
+  let dataUser = await getList(apiMainStorage);
+  let user = dataUser.find(user => email == user.email && user.password === password)
   currentUserId = user.id;
   seatList = user.seatList;
   seatCost = user.currentPrice;
+  document.getElementById('film_name').innerHTML=movie_name;
+  document.getElementById('cinema_name').innerHTML=cinema;
   document.getElementById('total_seat').innerHTML=user.currentPrice.toLocaleString('vi-VN',{
       style: 'currency',
       currency: 'VND'
@@ -40,6 +44,7 @@ async function checkUser() {
 
 //CHECK AVAILABLE SEAT THEN SELECT
 document.addEventListener("DOMContentLoaded", ()=> {
+    document.getElementById('seat_section').style.color = 'var(--button)';
     var seats = document.querySelectorAll(".seat");                                                 // Lọc tất cả các ghế
     var seatInstance = seatList.join(' ');
     seats.forEach((seat) =>{ 
@@ -76,6 +81,29 @@ document.addEventListener("DOMContentLoaded", ()=> {
             });
         }
     });
+    const countdownElement = document.getElementById('time_remaining');
+    let remainingSeconds = 5 * 60; // Số giây còn lại (10 phút)
+
+    function updateCountdown() {
+        const minutes = Math.floor(remainingSeconds / 60);
+        const seconds = remainingSeconds % 60;
+
+        const minutesDisplay = minutes < 10 ? `0${minutes}` : minutes;
+        const secondsDisplay = seconds < 10 ? `0${seconds}` : seconds;
+
+        countdownElement.textContent = `${minutesDisplay}:${secondsDisplay}`;
+
+        if (remainingSeconds > 0) {
+            remainingSeconds--;
+        } else {
+            clearInterval(timer); // Dừng đồng hồ sau khi đã đếm ngược xong
+            countdownElement.textContent = "00:00"; 
+            alert('Đã hết thời gian giữ ghế. Vui lòng đặt lại');
+            window.location.href = "/IT_Project/html/payTicket.html";
+        }
+    }
+    // Cập nhật đồng hồ mỗi giây
+    const timer = setInterval(updateCountdown, 1000);
 })
 
 
@@ -83,8 +111,8 @@ async function paySeat(){
     let userInfo = JSON.parse(localStorage.getItem('userInfo'));
     let email = userInfo[0][1];
     let password = userInfo[0][0];
-    let data = await getUserList();
-    let user = data.find(user => email == user.email && user.password === password)
+    let userData = await getList(apiMainStorage);
+    let user = userData.find(user => email == user.email && user.password === password)
     currentUserId = user.id;
     console.log('Fetching URL:', apiMainStorage + '/' + currentUserId);
     fetch(apiMainStorage + '/' + currentUserId, {

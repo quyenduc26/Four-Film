@@ -49,7 +49,7 @@ html{
     width: 35px;
     height: 35px;
 }
-.pay_selection{
+.cinema_selection{
     background-color: rgb(106, 101, 101);
     color: var(--nav-text-color);
     
@@ -103,40 +103,19 @@ html{
     text-decoration: none;
     color: rgb(237, 227, 227);
 }
-.pay_selection:hover {
+.cinema_selection:hover {
     background-color: #FFA500; /* Màu nền khi hover */
 }
 
-.pay_selection:hover .branch_cinema {
+.cinema_selection:hover .branch_cinema {
     background-color: var(--button); /* Màu nền khi hover */
     /* font-weight: 600;
     color: var(--normal-text); */
 }
-/* .pay_selection:last-child {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-} */
+
 .branch{
     list-style-type: none;
 }
-.cinema .branchs {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-}
 
-.cinema.active .branchs {
-    max-height: 1000px; /* Đặt một giá trị lớn để nó có thể mở ra bất kể kích thước nội dung */
-    animation: slideDown 3s; /* Áp dụng animation với thời gian là 2 giây */
-}
-
-@keyframes slideDown {
-    0% {
-        max-height: 0;
-    }
-    100% {
-        max-height: 1000px;
-    }
-}
 
 

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid">   
         <div class="row title my-2 pt-0 p-2">
             <div class="col-md-1 col-1 back text-start mt-2 pt-2">
                 <a href="/IT_Project/html/payTicket.html">
@@ -25,7 +25,7 @@
         </div>
         <div class="row nav mt-0  gap-1 pt-2 ">
             <div class="col-md-2 col-2 nav-item p-0 text-center">
-                <a href="/IT_Project/html/Feature_seat_quyen.html" style="color: white; text-decoration: none;">
+                <a href="/IT_Project/html/Feature_seat_quyen.html"  id="seat_section" style="color: white; text-decoration: none;">
                     <i class="bi bi-grid "></i>
                     <p class="nav_text">Chọn ghế</p>
                 </a>
@@ -43,8 +43,10 @@
                 <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
             </div>
             <div class="col-md-2 col-2 nav-item p-0 text-center">
-                <i class="bi bi-credit-card-2-front-fill"></i>
-                <p class="nav_text">Thanh toán</p>
+                <a href="/IT_Project/html/payment.html" style="color: white; text-decoration: none;">
+                    <i class="bi bi-credit-card-2-front-fill"></i>
+                    <p class="nav_text">Thanh toán</p>
+                </a>
             </div>
             <div class="col-md-1 col-1  nav-item p-0 text-center">
                 <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
@@ -68,14 +70,14 @@
                     <div class="row inforder m-3 rounded-2 p-2">
                         <div class="col-md-6 col-6 border-end text-start mt-1 ">
                             <p class="mb-0">
-                                <strong style=" font-size: 8px">TONG DON HANG</strong> 
+                                <strong style=" font-size: 8px">TỔNG ĐƠN HÀNG</strong> 
                                 <h6 class="mb-0"><span id="total_seat">0 Đ</span></h6>
                             </p>
                         </div>
                         <div class="col-md-6 col-6 text-end mt-1">
                             <p class="mb-0">
-                                <strong style=" font-size: 8px">THOI GIAN GIU GHE</strong> 
-                                <h6 class="mb-0" id="time_remaining">12:00</h6>
+                                <strong style=" font-size: 8px">THỜI GIAN GIỮ GHẾ</strong> 
+                                <h6 class="mb-0" id="time_remaining">05:00</h6>
                             </p>
                         </div>
                     </div>

@@ -29,7 +29,7 @@ body{
 .inforder{
     background-color: var(--nav-color);
     font-size: 12px;
-    color: var(--nav-text-color);
+    color: var(--normal-text);
 }
 button{
     color: var(--normal-text);
