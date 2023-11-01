@@ -1,6 +1,7 @@
 let apiMainStorage = 'https://65180651582f58d62d355368.mockapi.io/MainStorage';
 let apiItems = 'https://65300e576c756603295e2eec.mockapi.io/Items';
 let user;
+let currentTrans = [];
 let movie_name = 'Avatar 2: The Way of Water';
 let time = '8PM 6/11/2023'
 let itemContent = '';
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       item = dataCorn.find(item => user.consumeList[i] === item.id );
       console.log(item)
       if( i < user.consumeList.length - 1){
-        itemContent += user.quantityItem[i] + ' ' + item.name + ' ,';
+        itemContent += user.quantityItem[i] + ' ' + item.name + ' , ';
       }
       else{
         itemContent += user.quantityItem[i] + ' ' + item.name
@@ -37,6 +38,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     document.getElementById('paymt').textContent = 'MOMO Pay'
 
+    currentTrans.push(user.transactionList.length + 1);
+    currentTrans.push(cinema);
+    currentTrans.push(movie_name);
+    currentTrans.push(user.seatList);
+    currentTrans.push(user.itemContent);
+    currentTrans.push(time);
+    console.log(currentTrans)
+
+
+
 });
 
 async function getOrder(){ 
@@ -53,7 +64,6 @@ async function getOrder(){
         currency: 'VND'
     });
     infor += "\n\nThanh toán: Đã thanh toán " ;
- 
     emailjs.send(serviceID, templateID, { message: infor, email:user.email})
      .then(() => {
        alert('Sent!');
@@ -71,3 +81,4 @@ async function getList(api) {
       throw error;
     }
   }
+
