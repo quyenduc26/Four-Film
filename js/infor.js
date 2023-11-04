@@ -37,6 +37,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       
     }
     console.log(user);
+    var infor = "Tên rạp: " + cinema + '%0A';
+    infor += "\n\nTên phim: " + movie_name + '%0A';
+    infor += "\n\nGhế đã đặt: " + user.seatList.join(', ') + '%0A'; 
+    infor += "\n\nBắp nước: " + itemContent + '%0A';
+    infor += "\n\nThời gian: " + time + '%0A';
+    infor += "\n\nTổng đơn: " + user.currentPrice.toLocaleString('vi-VN',{
+        style: 'currency',
+        currency: 'VND'
+    }) + '%0A';
+    infor += "Số tài khoản: 105876863105" + '%0A';
+    infor += "Nội dung chuyển khoảng: Tên _ Tên Phim _ Số điện thoại " + '%0A';
     seatSelected = movie.seatSelected.concat(user.seatList);
     console.log(seatSelected)
     document.getElementById('movie_name').textContent = movie.title;
@@ -46,7 +57,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       style: 'currency',
       currency: 'VND'
     });
-    document.getElementById('paymt').textContent = 'MOMO Pay'
+    document.getElementById('paymt').textContent = 'Chuyển khoản QR'
+    var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + infor + '&amp;size=50x50';
+    document.getElementById('barcode').setAttribute("src",url) ;
+
+
 
     currentTrans.push(user.transactionList.length + 1);
     currentTrans.push(cinema);

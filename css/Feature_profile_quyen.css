@@ -24,12 +24,19 @@ body{
 *::-webkit-scrollbar {
     display: none; 
 }
+#details{
+    border-left: 5px var(--button) solid;
+}
+#ndetails{
+    border-left: 5px black solid;
+}
 .horizon_line{
-    /* display: block; */
+    display: block;
     height: 1px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: black;
+    background-color: white;
+    opacity: 0.3;
 }
 .vertical_line{
     /* display: block; */
