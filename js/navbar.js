@@ -1,21 +1,6 @@
 //Navbar
   
 
-$(document).ready(function() {
-  // Đảm bảo rằng các phần tử HTML đã được tải hoàn toàn trước khi thực thi mã JavaScript
-  $('#theaters').ready(function() {
-    // Sử dụng setTimeout để đảm bảo rằng các phần tử HTML đã hoàn thiện việc tạo
-    setTimeout(function() {
-      $('#theaters').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        prevArrow: $('#left5'),
-        nextArrow: $('#right5'),
-      });
-    }, 100);
-  });
-});
-
 document.addEventListener('DOMContentLoaded',function(){
   const signupButton = document.getElementById("post")
   const singupMobile = document.getElementById('singupMobile')
@@ -225,6 +210,10 @@ document.addEventListener('DOMContentLoaded',function(){
       if (storedValue === 'true') {
         const iconUser = `<a href="Feature_profile_quyen.html"><i class="fa-solid fa-user" id="iconUser"></i></a>`;
         document.getElementById('changeItem').innerHTML = iconUser;
+        const text = `<a class="nav-link" id="logOut" href="#"
+        >Đăng xuất</a
+      >`
+        document.getElementById('itemMenuMobile').innerHTML = text;
       }
     }
     function isValidEmail(email) {
@@ -252,6 +241,19 @@ document.addEventListener('DOMContentLoaded',function(){
   next.addEventListener('click', () => {
     notificationModal.style.display = 'none'
   })
+
+  var logOuts = document.getElementById("logOut")
+  logOuts.addEventListener("click", function () {
+    logOut()
+  })
+
+  function logOut() {
+    window.localStorage.clear(); 
+    window.close.localStorage.clear();
+    myVariable = false;
+    localStorage.setItem('myVariable', myVariable);
+    window.location.href = `home.html`
+  }
   })
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

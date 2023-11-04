@@ -45,6 +45,9 @@ body {
   object-fit: cover;
   height: 700px;
 }
+#light {
+  color: #909090;
+}
 .icon {
   margin-right: 30px;
 }
@@ -90,6 +93,6 @@ hr {
   font-size: 20px;
 }
 
-#text{
+#text {
   color: #909090;
 }

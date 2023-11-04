@@ -98,7 +98,7 @@ fetch(apiURL)
             
             // Bước 2: Lấy ID của card
           var cardId = this.getAttribute('data-id');
-          window.location.href = `detail.html?id=${cardId}`
+          window.location.href = `TrangCt.html?id=${cardId}`
             // Bước 3: Chuyển hướng đến trang chi tiết
             var detailPageUrl = "https://65180651582f58d62d355368.mockapi.io/Movies/" + cardId;
            

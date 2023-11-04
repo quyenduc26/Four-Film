@@ -17,6 +17,9 @@
   gap: 40px;
   width: 100%;
 }
+#light{
+  color: #909090;
+}
 
 .carousel-caption {
   position: absolute;
