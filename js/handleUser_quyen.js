@@ -39,6 +39,9 @@ async function checkUser() {
   let data = await getUserList();
   let user = data.find(user => email == user.email && user.password === password)
   currentUserId = user.id;
+  document.getElementById('avatar').setAttribute("src", user.avatar);
+  document.getElementById('gender').innerHTML = user.gender;
+  document.getElementById('birthday').innerHTML = user.dayOfBirth;
   document.getElementById('userAccount').innerHTML=user.userAccount;
   document.getElementById('account').innerHTML=user.userAccount;
   document.getElementById('phone_nb').innerHTML=user.phoneNumber;
@@ -56,6 +59,47 @@ async function checkUser() {
   }
 }
 
+
+
+
+//FUNCTION MANY
+function changeMany() {
+  var nAccName = document.getElementById('c_name').value;
+  var nGender = document.getElementById('c_gender').value;
+  var ndob = document.getElementById('c_birthday').value;
+
+  if (nAccName === '') {
+    alert('Vui lòng điền đầy đủ thông tin');
+  }
+  if (nGender === '' || nGender != 'Nam' || nGender != 'nam' || nGender != 'Nữ' || nGender != 'nữ') {
+    nGender = "Chưa cập nhật";
+  }if (ndob === '') {
+    ndob = "Chưa cập nhật";
+  }
+  else{
+    console.log('Fetching URL:', apiUsers + '/' + currentUserId);
+    fetch(apiUsers + '/' + currentUserId, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        userAccount: nAccName,
+        gender: nGender,
+        dayOfBirth: ndob  
+      })
+    }).then(res => res.json()
+    ).then(user => {
+      document.getElementById('userAccount').innerHTML = user.userAccount;
+      document.getElementById('account').innerHTML = user.userAccount;
+      document.getElementById('gender').innerHTML = user.gender;
+      document.getElementById('birthday').innerHTML = user.dayOfBirth;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Kết nối của bạn đang gặp vấn đề. Vui lòng thử lại.');
+    });
+  }
+
+}
 
 
 
@@ -87,6 +131,33 @@ function changeAccount() {
 }
 
 
+
+
+//FUNCTION CHANGE PHONENUMBER
+function changeAccount() {
+  var phone_nb = document.getElementById('nNumber').value;
+  if (phone_nb === '') {
+    alert('Vui lòng điền đầy đủ thông tin');
+  }
+  else{
+    console.log('Fetching URL:', apiUsers + '/' + currentUserId);
+    fetch(apiUsers + '/' + currentUserId, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        phoneNumber: phone_nb 
+      })
+    }).then(res => res.json()
+    ).then(user => {
+      document.getElementById('phone_nb').innerHTML=user.phoneNumber;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Kết nối của bạn đang gặp vấn đề. Vui lòng thử lại.');
+    });
+  }
+
+}
 
 //FUNCTION CHANGE EMAIL
 function changeEmail() {
