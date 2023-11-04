@@ -1,5 +1,6 @@
 let apiMainStorage = 'https://65180651582f58d62d355368.mockapi.io/MainStorage';
-let movie_name = 'Avatar 2: The Way of Water';
+let apiMovie = 'https://65180651582f58d62d355368.mockapi.io/Movies';
+let movieID = JSON.parse(localStorage.getItem('idCard'));
 
 
 
@@ -38,9 +39,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const timer = setInterval(updateCountdown, 1000);
 });
 
-async function getUserList() {
+async function getList(api) {
     try {
-      const response = await fetch(apiMainStorage);
+      const response = await fetch(api);
       const data = await response.json();
       return data; // Trả về dữ liệu từ API
     } catch (error) {
@@ -55,8 +56,8 @@ async function payBooking(){
   let userInfo = JSON.parse(localStorage.getItem('userInfo'));
   let email = userInfo[0][1];
   let password = userInfo[0][0];
-  let data = await getUserList();
-  let user = data.find(user => email == user.email && user.password === password)
+  let dataUser = await getList(apiMainStorage);
+  let user = dataUser.find(user => email == user.email && user.password === password)
   currentUserId = user.id;
   fetch(apiMainStorage + '/' + currentUserId, {
     method: 'PUT',
@@ -87,18 +88,22 @@ async function checkUser() {
   let userInfo = JSON.parse(localStorage.getItem('userInfo'));
   let email = userInfo[0][1];
   let password = userInfo[0][0];
-  let data = await getUserList();
-  let user = data.find(user => email == user.email && user.password === password)
+  let dataUser = await getList(apiMainStorage);
+  let dataMovie = await getList(apiMovie);
+  let movie = dataMovie.find(movie =>  movieID==movie.id );
+  let user = dataUser.find(user => email == user.email && user.password === password)
   currentUserId = user.id;
-  document.getElementById('film_name').innerHTML=movie_name;
+  document.getElementById('film_name').innerHTML=movie.title;
   document.getElementById('cinema_name').innerHTML=cinema;
   document.getElementById('total_seat').innerHTML=user.currentPrice.toLocaleString('vi-VN',{
       style: 'currency',
       currency: 'VND'
   });
   document.getElementById('seat').innerHTML=user.seatList.join(' ');
-//   document.getElementById('fullname').value = user.userAccount;
+  document.getElementById('fullname').value = user.fullname;
   document.getElementById('email').value = user.email;
+  document.getElementById('phone_nb').value = user.phoneNumber;
+
 
 } 
 

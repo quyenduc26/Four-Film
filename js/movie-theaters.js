@@ -76,7 +76,7 @@ fetch(apiURL)
                   </div>
                   <div class="movie-info">
                     <i class="bx bxs-time"></i>
-                    <span>120 mins</span>
+                    <span>${movie.episodes}</span>    
                   </div>
                   <div class="movie-info">
                     <span>HD</span>
@@ -85,6 +85,7 @@ fetch(apiURL)
                     <span>16+</span>
                   </div>
                 </div>
+                <div class="movie-info"><span>${movie.time}</span></div>
               </div>
             </a>
           </div>` 

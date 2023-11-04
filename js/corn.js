@@ -1,5 +1,7 @@
 let apiMainStorage = 'https://65180651582f58d62d355368.mockapi.io/MainStorage';
+let apiMovie = 'https://65180651582f58d62d355368.mockapi.io/Movies';
 let apiItems = 'https://65300e576c756603295e2eec.mockapi.io/Items';
+let movieID = JSON.parse(localStorage.getItem('idCard'));
 let currentUserId;
 let currentPrice;
 let currentItem = [];
@@ -140,6 +142,15 @@ async function payCorn(){
     });
   
 }
+async function getList(api) {
+  try {
+    const response = await fetch(api);
+    const data = await response.json();
+    return data; // Trả về dữ liệu từ API
+  } catch (error) {
+    throw error;
+  }
+}
 async function getItemList(){
   try {
     const response = await fetch(apiItems);
@@ -164,15 +175,17 @@ async function checkUser() {
   let cinema = JSON.parse(localStorage.getItem('cinema'));
   let email = userInfo[0][1];
   let password = userInfo[0][0];
-  let data = await getUserList();
-  let user = data.find(user => email == user.email && user.password === password)
+  let dataUser = await getList(apiMainStorage);
+  let dataMovie = await getList(apiMovie);
+  let movie = dataMovie.find(movie =>  movieID==movie.id );
+  let user = dataUser.find(user => email == user.email && user.password === password)
   currentUserId = user.id;
   currentPrice = user.currentPrice;
   currentItem = user.consumeList;
   console.log(currentItem);
   currentQuantity = user.quantityItem;
   console.log(currentQuantity);
-  document.getElementById('film_name').innerHTML=movie_name;
+  document.getElementById('film_name').innerHTML=movie.title;
   document.getElementById('cinema_name').innerHTML=cinema;
   document.getElementById('total_seat').innerHTML=user.currentPrice.toLocaleString('vi-VN',{
       style: 'currency',
@@ -183,7 +196,7 @@ async function checkUser() {
 
 async function renderItem(){
   await checkUser();
-  let items = await getItemList();
+  let items = await getList(apiItems);
   items.forEach((item)=>{
     if (currentItem.includes(item.id)) {
       var id = currentItem.indexOf(item.id);
