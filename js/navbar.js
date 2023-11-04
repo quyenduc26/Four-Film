@@ -1,4 +1,20 @@
 //Navbar
+  
+
+$(document).ready(function() {
+  // Đảm bảo rằng các phần tử HTML đã được tải hoàn toàn trước khi thực thi mã JavaScript
+  $('#theaters').ready(function() {
+    // Sử dụng setTimeout để đảm bảo rằng các phần tử HTML đã hoàn thiện việc tạo
+    setTimeout(function() {
+      $('#theaters').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: $('#left5'),
+        nextArrow: $('#right5'),
+      });
+    }, 100);
+  });
+});
 
 document.addEventListener('DOMContentLoaded',function(){
   const signupButton = document.getElementById("post")
@@ -24,9 +40,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var next = document.getElementById('next')
     var accountListJSON = localStorage.getItem("accountList");
   var accountList = accountListJSON ? JSON.parse(accountListJSON) : [];
-  
-    
-  
+
   singupMobile.addEventListener('click', function() {
     signupModal.style.display = "block";
     menuMobile.classList.toggle("open");
@@ -243,7 +257,6 @@ document.addEventListener('DOMContentLoaded',function(){
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
 // Bước 1: Lắng nghe sự kiện khi nhấp vào card
 
 
@@ -292,13 +305,6 @@ nextButton.addEventListener('click', () => {
 
 
 //Profile
-
-
-
-
-
-
-
 
 
 

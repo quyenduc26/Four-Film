@@ -23,6 +23,12 @@
   align-items: center;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(18% - 10px);
+}
+
 .slider-control {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0);
@@ -62,6 +68,23 @@
 .slider {
   display: flex;
   transition: transform 0.3s ease;
+}
+
+#left5 {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#right5 {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .slider-item {
