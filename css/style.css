@@ -1,0 +1,19 @@
+.hover-container {
+    position: relative;
+  }
+  
+  .text-popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .hover-trigger:hover + .text-popup {
+    display: block;
+  }
+  

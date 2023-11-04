@@ -76,7 +76,7 @@ fetch(apiURL)
                   </div>
                   <div class="movie-info">
                     <i class="bx bxs-time"></i>
-                    <span>120 mins</span>
+                    <span>${movie.episodes}</span>    
                   </div>
                   <div class="movie-info">
                     <span>HD</span>
@@ -85,6 +85,7 @@ fetch(apiURL)
                     <span>16+</span>
                   </div>
                 </div>
+                <div class="movie-info"><span>${movie.time}</span></div>
               </div>
             </a>
           </div>` 
@@ -98,7 +99,8 @@ fetch(apiURL)
             
             // Bước 2: Lấy ID của card
           var cardId = this.getAttribute('data-id');
-          window.location.href = `Feature_seat_quyen.html?id=${cardId}`
+          localStorage.setItem("idCard",cardId)
+          window.location.href = `payTicket.html?id=${cardId}`
             // Bước 3: Chuyển hướng đến trang chi tiết
             var detailPageUrl = "https://65180651582f58d62d355368.mockapi.io/Movies/" + cardId;
            
