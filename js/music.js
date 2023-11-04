@@ -5,7 +5,7 @@ let datas = [];
 fetch(apiURL)
     .then(response => response.json())
     .then(data => {
-        const foundAnime = data.filter(movie => 'music' === movie.category);
+        const foundAnime = data.filter(movie => 'âm nhạc' === movie.category);
         foundAnime.forEach(function (movie, index) {
             var indicatorButton = document.createElement("button");
             indicatorButton.category = "button";
