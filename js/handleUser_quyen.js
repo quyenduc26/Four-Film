@@ -41,7 +41,7 @@ async function checkUser() {
   currentUserId = user.id;
   document.getElementById('userAccount').innerHTML=user.userAccount;
   document.getElementById('account').innerHTML=user.userAccount;
-  document.getElementById('ID').innerHTML=user.identifyCode;
+  document.getElementById('phone_nb').innerHTML=user.phoneNumber;
   document.getElementById('email').innerHTML=user.email;
   document.getElementById('area').innerHTML=user.city;
   document.getElementById('password').innerHTML=user.password;
