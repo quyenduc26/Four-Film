@@ -105,7 +105,7 @@ fetch(apiURL)
       }
       else if (movie.category === 'Phim chiếu rạp') {
         var movieMemory = `
-        <div class="card" id="Theaters" style="width: 12rem; height: 20rem; background-color:black;margin-right: 10px;" data-id="${movie.id}">
+        <div class="card" id="Theaters" style= "background-color:black;margin-right: 10px;" data-id="${movie.id}">
         <img id="watching" src="${movie.src}" class="card-img-top" alt="..." style="height: 15rem;object-fit: cover;">
         <div class="card-body" style="padding: 10px 0px">
           <p class="card-text" style="color:white; text-align:left">${movie.title}</p>
@@ -146,7 +146,7 @@ nextButton.addEventListener('click', () => {
   moveSlider();
 
   // Kiểm tra nếu đạt đến phần tử cuối cùng
-  if (currentPosition <= -(sliderItems.length - 6) * sliderItemWidth) {
+  if (currentPosition <= -(sliderItems.length - 4) * sliderItemWidth) {
     currentPosition = -(sliderItems.length -6.4 ) * sliderItemWidth;
   }
 });

@@ -26,7 +26,9 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
+#itemMenuMobile #light {
+  color: #909090;
+}
 .carousel-item.active .row {
   justify-content: center;
 }
