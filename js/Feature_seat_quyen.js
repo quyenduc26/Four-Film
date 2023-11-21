@@ -1,9 +1,11 @@
 let apiCinema = 'https://65300e576c756603295e2eec.mockapi.io/Cinema';
+let apiMovie = 'https://65180651582f58d62d355368.mockapi.io/Movies';
 let apiMainStorage = 'https://65180651582f58d62d355368.mockapi.io/MainStorage';
-let movie_name = 'Avatar 2: The Way of Water';
+let movieID = JSON.parse(localStorage.getItem('idCard'));
 let currentUserId;
 var seatCost = 0;
 var seatList = [];
+let movie;
 
 
 //CHECK STAUS OF THE USER
@@ -22,12 +24,17 @@ async function checkUser() {
   let email = userInfo[0][1];
   let password = userInfo[0][0];
   let dataUser = await getList(apiMainStorage);
-  let user = dataUser.find(user => email == user.email && user.password === password)
+  let dataMovie = await getList(apiMovie);
+  movie = dataMovie.find(movie =>  movieID==movie.id );
+  let user = dataUser.find(user => email == user.email && user.password === password);
   currentUserId = user.id;
   seatList = user.seatList;
   seatCost = user.currentPrice;
-  document.getElementById('film_name').innerHTML=movie_name;
+  seatSelected = movie.seatSelected;
+  console.log(seatSelected)
+  document.getElementById('film_name').innerHTML=movie.title;
   document.getElementById('cinema_name').innerHTML=cinema;
+  document.getElementById('time').innerHTML=movie.time;
   document.getElementById('total_seat').innerHTML=user.currentPrice.toLocaleString('vi-VN',{
       style: 'currency',
       currency: 'VND'
@@ -37,6 +44,9 @@ async function checkUser() {
   seats.forEach((seat) => {
     if (seatList.includes(seat.textContent)) {
       seat.setAttribute("data-selected", "true");
+    }
+    if (seatSelected.includes(seat.textContent)){
+      seat.setAttribute("data-available", "false");
     }
   });
 
@@ -48,7 +58,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
     var seats = document.querySelectorAll(".seat");                                                 // Lọc tất cả các ghế
     var seatInstance = seatList.join(' ');
     seats.forEach((seat) =>{ 
-        // seatList.push(seat.textContent);
         var isUnavailable = seat.getAttribute('data-available') === 'false';                          // Kiểm tra xem ghế còn không
         if(isUnavailable){                                                                 
             seat.removeAttribute("data-selected");                                                    // Nếu kh còn thì xoá data-selected

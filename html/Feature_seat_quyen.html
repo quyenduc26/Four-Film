@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chose seat</title>
+    <title>4Film - Chọn ghế</title>
+    <link rel="icon" type="image/x-icon" href="/IT_Project/img/android-chrome-512x512.png">
     <link href="/IT_Project/bootstrap-5.3.1-dist/bootstrap.min.css" rel="stylesheet">
     <script src="/IT_Projectbootstrap-5.3.1-dist/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/IT_Project/css/Feature_seat_quyen.css">
@@ -20,7 +21,7 @@
                 </a>
             </div>
             <div class="col-md-11 col-11 text-center">
-                <img style="height: 40px" src="/IT_Project/img/Logo.png" alt="title-background">
+                <a href="/IT_Project/html/home.html"> <img style="height: 40px" src="/IT_Project/img/Logo.png" alt="title-background"></a>
             </div>
         </div>
         <div class="row nav mt-0  gap-1 pt-2 ">
@@ -52,8 +53,10 @@
                 <i class="bi bi-chevron-compact-right" style="font-size: 30px;"></i>
             </div>
             <div class="col-md-2 col-2 nav-item p-0 text-center">
-                <i class="bi bi-receipt-cutoff"></i>
-                <p class="nav_text">Thông tin về</p>
+                <a href="/IT_Project/html/infor.html"  id="payment_section" style="color: white; text-decoration: none;">
+                    <i class="bi bi-receipt-cutoff"></i>
+                    <p class="nav_text">Thông tin về</p>
+                </a>
             </div> 
         </div>
         <div class="right_block mt-3">
@@ -63,7 +66,7 @@
                         <p class="p-2 pb-0 mb-2" style="overflow: auto; white-space: nowrap;">
                             <span id="film_name">Ten film</span>
                             <br><strong id="cinema_name">Ten rap phim</strong>
-                            <br><span id="time">19:30</span> - Hom nay <span id="day"></span>
+                            <br><span id="time">19:30</span><span id="day"></span>
                             <br>Ghe - <span id="seat" style="font-weight: 700; font-size: 14px;" ></span>
                         </p>
                     </div>
@@ -121,7 +124,7 @@
                                     <li class="seat" data-available="true" data-selected="false" data-price="150000" ><p class="seat_name d-flex justify-content-center">A8</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="150000" ><p class="seat_name d-flex justify-content-center">A9</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="150000" ><p class="seat_name d-flex justify-content-center">A10</p></li>
-                                    <li class="seat" data-available="false" data-selected="false" data-price="150000" ><p class="seat_name d-flex justify-content-center">A11</p></li>
+                                    <li class="seat" data-available="true" data-selected="false" data-price="150000" ><p class="seat_name d-flex justify-content-center">A11</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="150000" ><p class="seat_name d-flex justify-content-center">A12</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="150000" ><p class="seat_name d-flex justify-content-center">A13</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="150000" ><p class="seat_name d-flex justify-content-center">A14</p></li>
@@ -143,7 +146,7 @@
                                     <li class="seat" data-available="true" data-selected="false" data-price="100000" ><p class="seat_name d-flex justify-content-center">B8</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="100000" ><p class="seat_name d-flex justify-content-center">B9</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="100000" ><p class="seat_name d-flex justify-content-center">B10</p></li>
-                                    <li class="seat" data-available="false" data-selected="false" data-price="100000" ><p class="seat_name d-flex justify-content-center">B11</p></li>
+                                    <li class="seat" data-available="true" data-selected="false" data-price="100000" ><p class="seat_name d-flex justify-content-center">B11</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="100000" ><p class="seat_name d-flex justify-content-center">B12</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="100000" ><p class="seat_name d-flex justify-content-center">B13</p></li>
                                     <li class="seat" data-available="true" data-selected="false" data-price="100000" ><p class="seat_name d-flex justify-content-center">B14</p></li>
