@@ -194,7 +194,10 @@ document.addEventListener('DOMContentLoaded',function(){
             localStorage.setItem('userInfo', JSON.stringify(userInfo));
             userInfo.splice(0,0,a);
             localStorage.setItem('userInfo', JSON.stringify(userInfo));
-            
+            var myVariable = true;
+
+              // Lưu giá trị cập nhật vào local storage
+              localStorage.setItem('myVariable', myVariable);
             notificationModal.style.display = 'block';
             document.getElementById('notificationContent').innerHTML = 'Chúc mừng bạn đăng ký thành công!';
             registerModal.style.display = 'none';
