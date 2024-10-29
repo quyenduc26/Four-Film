@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4Film - Chọn rạp</title>
-    <link rel="icon" type="image/x-icon" href="/IT_Project/img/android-chrome-512x512.png">
-    <script src="/IT_Project/bootstrap-5.3.1-dist/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/IT_Project/bootstrap-5.3.1-dist/bootstrap.min.css">
-    <link rel="stylesheet" href="/IT_Project/css/payTicket.css">
-    <script src="/IT_Project/js/payTicket.js"></script>
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="../img/android-chrome-512x512.png" />
+    <script src="../bootstrap-5.3.1-dist/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../bootstrap-5.3.1-dist/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/payTicket.css" />
+    <script src="../js/payTicket.js"></script>
+  </head>
+  <body>
     <div class="container-fluid">
-        <div class=" row mw-100">
-            <div class="col-md-12 col-12 right-content  m-md-3 rounded-2">
-                <div class="row m-2 p-2 text-center ">
-                    <h4 class="text-light">Mua vé trực tuyến</h4>
-                </div>
-                <div class="row guide m-3 mx-0 p-1 rounded-1">
-                    <p class=" guide_text m-0"><i class="bi bi-info-circle"></i> Chọn địa điểm</p>
-                </div>
-                <div class="row select_area m-0 p-2 rounded-1">
-                    <select class=" city p-1 rounded-1" name="" id="city">
-                        <option class=" col-md-8 col-12 option_style" value="">Chọn địa điểm</option>
-                        <option class=" col-md-8 col-12 option_style" value="HCM">Hồ Chí Minh</option>
-                        <option class=" col-md-8 col-12 option_style" value="DN">Đà Nẵng</option>
-                        <option class=" col-md-8 col-12 option_style" value="HN">Hà Nội</option>
-                    </select>
-                </div>
-                
-                <div class="row guide m-3 mx-0 p-1 rounded-1">
-                    <p class=" guide_text m-0"><i class="bi bi-info-circle"></i> Nhấn vào rạp để tiến hành mua vé</p>
-                </div>
-                <div class="select_cinema row m-3 mx-0 p-0 mb-3">
-                    <div  class=" cinema  row m-0 p-0 ">
-                        <div class="heading_table row m-0 p-2 px-0 rounded-top-3">
-                            <img class="col-md-2 col-3 logo_cinema mb-1" src="/IT_Project/img/Logo.png" alt="">
-                            <p class="col-md-10 col-9 pt-2 pb-2 m-0 p-0 cinema_name">Các rạp chiếu</p>
-                        </div>
-                        <ul class="branchs m-0" id="cinemas">
-                            
-                        </ul>
-                    </div>
-                    
-                </div> 
-                       
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+      <div class="row mw-100">
+        <div class="col-md-12 col-12 right-content m-md-3 rounded-2">
+          <div class="row m-2 p-2 text-center">
+            <h4 class="text-light">Mua vé trực tuyến</h4>
+          </div>
+          <div class="row guide m-3 mx-0 p-1 rounded-1">
+            <p class="guide_text m-0"><i class="bi bi-info-circle"></i> Chọn địa điểm</p>
+          </div>
+          <div class="row select_area m-0 p-2 rounded-1">
+            <select class="city p-1 rounded-1" name="" id="city">
+              <option class="col-md-8 col-12 option_style" value="">Chọn địa điểm</option>
+              <option class="col-md-8 col-12 option_style" value="HCM">Hồ Chí Minh</option>
+              <option class="col-md-8 col-12 option_style" value="DN">Đà Nẵng</option>
+              <option class="col-md-8 col-12 option_style" value="HN">Hà Nội</option>
+            </select>
+          </div>
 
+          <div class="row guide m-3 mx-0 p-1 rounded-1">
+            <p class="guide_text m-0"><i class="bi bi-info-circle"></i> Nhấn vào rạp để tiến hành mua vé</p>
+          </div>
+          <div class="select_cinema row m-3 mx-0 p-0 mb-3">
+            <div class="cinema row m-0 p-0">
+              <div class="heading_table row m-0 p-2 px-0 rounded-top-3">
+                <img class="col-md-2 col-3 logo_cinema mb-1" src="../img/Logo.png" alt="" />
+                <p class="col-md-10 col-9 pt-2 pb-2 m-0 p-0 cinema_name">Các rạp chiếu</p>
+              </div>
+              <ul class="branchs m-0" id="cinemas"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
