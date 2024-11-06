@@ -112,6 +112,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const timer = setInterval(updateCountdown, 1000);
 });
 
+async function goToCorn() {
+  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  let email = userInfo[0][1];
+  let password = userInfo[0][0];
+  let userData = await getList(apiMainStorage);
+  let user = userData.find((user) => email == user.email && user.password === password);
+  currentUserId = user.id;
+  console.log("Fetching URL:", apiMainStorage + "/" + currentUserId);
+  fetch(apiMainStorage + "/" + currentUserId, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      currentPrice: seatCost,
+      seatList: seatList,
+    }),
+  })
+    .then((res) => res.json())
+    .then((user) => {
+      window.location.href = "../html/corn.html";
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("Kết nối của bạn đang gặp vấn đề. Vui lòng thử lại.");
+    });
+}
+
 async function paySeat() {
   let userInfo = JSON.parse(localStorage.getItem("userInfo"));
   let email = userInfo[0][1];
@@ -130,8 +156,7 @@ async function paySeat() {
   })
     .then((res) => res.json())
     .then((user) => {
-      alert(user.currentPrice);
-      window.location.href = "../html/corn.html";
+      window.location.href = "../html/payment.html";
     })
     .catch((error) => {
       console.error("Error:", error);
