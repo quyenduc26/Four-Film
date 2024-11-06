@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 async function getOrder() {
-  const serviceID = "default_service";
-  const templateID = "template_0g8qxcr";
+  const serviceID = "service_ubve72o";
+  const templateID = "template_kbttu4s";
   var infor = "Tên khách hàng: " + user.fullname;
   infor += "\n\nSố điện thoại: " + user.phoneNumber;
   infor += "\n\nTên rạp: " + cinema;
